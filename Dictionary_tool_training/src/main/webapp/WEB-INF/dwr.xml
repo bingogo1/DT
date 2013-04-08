@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- START SNIPPET: dwr -->
+<!DOCTYPE dwr PUBLIC 
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" 
+    "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+    <allow>
+    	<convert converter="exception" match="java.lang.Exception">
+  			<param name='include' value='message'/>
+ 		</convert>
+    
+        <create creator="new" javascript="validator">
+            <param name="class" value="org.apache.struts2.validators.DWRValidator"/>
+        </create>
+        <convert converter="bean" match="com.opensymphony.xwork2.ValidationAwareSupport"/>
+        
+        
+        <create creator="spring" javascript="productManager">
+            <param name="beanName" value="productManager"/>
+        </create>
+        
+        <create creator="spring" javascript="productCenterManager">
+            <param name="beanName" value="productCenterManager"/>
+        </create>
+        
+        <create creator="spring" javascript="userManager">
+            <param name="beanName" value="userManager"/>
+        </create>
+        
+        <create creator="spring" javascript="roleManager">
+            <param name="beanName" value="roleManager"/>
+        </create>
+        
+        <convert converter="bean" match="bin.g11n.gt.model.User"/>
+        <convert converter="bean" match="bin.g11n.gt.model.Role"/>
+        <convert converter="bean" match="bin.g11n.gt.model.Function"/>
+        <convert converter="bean" match="bin.g11n.gt.model.Bu"/>       
+        <convert converter="bean" match="bin.g11n.gt.model.Product"/>       
+        <convert converter="bean" match="bin.g11n.gt.model.ProductCenter"/>       
+        <convert converter="bean" match="bin.g11n.gt.model.ProductLine"/>       
+        
+    </allow>
+
+    <signatures>
+        <![CDATA[
+        import java.util.Map;
+        import java.util.List;
+        
+        import org.apache.struts2.validators.DWRValidator;
+        
+        DWRValidator.doPost(String, String, Map<String, String>);
+        
+        ]]>
+    </signatures>
+</dwr>
+<!-- END SNIPPET: dwr -->

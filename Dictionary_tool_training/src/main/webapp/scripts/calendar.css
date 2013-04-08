@@ -1,0 +1,161 @@
+<STYLE>
+.calcaption
+{
+    BACKGROUND-COLOR: steelblue;
+    BORDER-BOTTOM: #003399 1px solid;
+    BORDER-LEFT: #003399 1px solid;
+    BORDER-RIGHT: #003399 1px solid;
+    BORDER-TOP: #003399 1px solid;
+    COLOR: #ffffff;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal
+}
+.calender
+{
+    BACKGROUND-COLOR: #eeeeee;
+    WIDTH: 100px
+}
+.calborder
+{
+    BORDER-BOTTOM: #cccccc 1px outset;
+    BORDER-LEFT: #cccccc 1px outset;
+    BORDER-RIGHT: #cccccc 1px outset;
+    BORDER-TOP: #cccccc 1px outset
+}
+.caldropdowns
+{
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Helvetica, sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+    WIDTH: auto
+}
+.calbutts
+{
+    BACKGROUND-COLOR: #eeeeee;
+    BORDER-BOTTOM-STYLE: none;
+    BORDER-LEFT-STYLE: none;
+    BORDER-RIGHT-STYLE: none;
+    BORDER-TOP-STYLE: none;
+    COLOR: #000000;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    WIDTH: auto
+}
+.calinsideborder
+{
+    BORDER-BOTTOM: #cccccc 1px inset;
+    BORDER-LEFT: #cccccc 1px inset;
+    BORDER-RIGHT: #cccccc 1px inset;
+    BORDER-TOP: #cccccc 1px inset
+}
+.caldays
+{
+    BACKGROUND-COLOR: #CCCCCC;
+    COLOR: SteelBlue;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    TEXT-TRANSFORM: uppercase
+}
+.calwknd
+{
+    BORDER-BOTTOM: 1px;
+    BORDER-LEFT: 1px;
+    BORDER-RIGHT: 1px;
+    BORDER-TOP: 1px;
+    COLOR: #000000;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+    HEIGHT: 25px;
+    WIDTH: 25px
+}
+.calwkdy
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #666666 1px;
+    BORDER-LEFT: #ffffff 1px;
+    BORDER-RIGHT: #666666 1px;
+    BORDER-TOP: #ffffff 1px;
+    COLOR: #000000;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    HEIGHT: 22px;
+    TEXT-DECORATION: none;
+    WIDTH: 22px
+}
+.calinsidesettings
+{
+    WIDTH: 0pt
+    BORDER-BOTTOM: #666666 1px solid;
+    BORDER-LEFT: #ffffff 1px solid;
+    BORDER-RIGHT: #666666 1px solid;
+    BORDER-TOP: #ffffff 1px solid;
+		
+}
+.button
+{
+    BACKGROUND-COLOR: #eeeeee;
+    BORDER-BOTTOM: #666666 1px solid;
+    BORDER-LEFT: #ffffff 1px solid;
+    BORDER-RIGHT: #666666 1px solid;
+    BORDER-TOP: #ffffff 1px solid;
+    COLOR: #000000;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none
+}
+.textstyle
+{
+    BACKGROUND-COLOR: ivory;
+    BORDER-BOTTOM: 1px outset;
+    BORDER-LEFT: 1px inset;
+    BORDER-RIGHT: 1px outset;
+    BORDER-TOP: 1px inset;
+    FONT-FAMILY: "verdana";
+    FONT-SIZE: 10px;
+    outline: medium ridge black
+}
+.calToday
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: crimson 1px solid;
+    BORDER-LEFT: crimson 1px solid;
+    BORDER-RIGHT: crimson 1px solid;
+    BORDER-TOP: crimson 1px solid;
+    COLOR: crimson;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    HEIGHT: 22px;
+    TEXT-DECORATION: none;
+    WIDTH: 22px
+}
+.calPrevious
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #666666 1px;
+    BORDER-LEFT: #ffffff 1px;
+    BORDER-RIGHT: #666666 1px;
+    BORDER-TOP: #ffffff 1px;
+    COLOR: #cccccc;
+    CURSOR: hand;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: normal;
+    HEIGHT: 22px;
+    TEXT-DECORATION: none;
+    WIDTH: 22px
+}
+</STYLE>

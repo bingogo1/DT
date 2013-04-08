@@ -1,0 +1,90 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0//EN" 
+    "http://www.opensymphony.com/xwork/xwork-validator-1.0.dtd">
+ <validators>
+    <field name="user.username">
+        <field-validator type="requiredstring" >
+            <message key="errors.required" />
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">1</param>
+            <param name="maxLength">50</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+        <field-validator type="regex">
+            <param name="expression">\w+</param>
+            <message key="errors.alphabet" />
+        </field-validator>
+    </field> 
+        
+    <field name="user.password">
+        <field-validator type="requiredstring" >
+            <message key="errors.required" />
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">5</param>
+            <param name="maxLength">15</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    <field name="user.confirmPassword">
+        <field-validator type="requiredstring" >
+            <message key="errors.required" />
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">5</param>
+            <param name="maxLength">15</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    <field name="user.firstName">
+        <field-validator type="requiredstring" >
+            <message key="errors.required" />
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">1</param>
+            <param name="maxLength">40</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    <field name="user.lastName">
+        <field-validator type="requiredstring" >
+            <message key="errors.required" />
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">1</param>
+            <param name="maxLength">40</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    <field name="user.companyTel">
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">0</param>
+            <param name="maxLength">14</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    <field name="user.email">
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">1</param>
+            <param name="maxLength">255</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+        <field-validator type="regex">
+            <param name="expression">\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</param>
+            <message key="errors.email" />
+        </field-validator>
+    </field> 
+        
+</validators>      

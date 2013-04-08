@@ -1,0 +1,135 @@
+#float_div {
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px dashed gray;
+    background-color: #D8FBDB;
+    width: 600px;
+    overflow: hidden;
+    cursor: default;
+    position: absolute;
+    z-index: 1;
+}
+
+#float_div span.close {
+    margin-left: 500px;
+}
+
+#float_div span.close a {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(img/icon_close.jpg);
+    padding: 4px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+#float_div li {
+    list-style: square;
+    margin: 5px 5px 5px 15px;
+}
+
+.replace a span {
+    text-indent:-10000px;
+}
+span.accesskey {
+    text-decoration:none;
+}
+
+.pagination span.current {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #006699;
+    font-weight: bold;
+    background-color: #006699;
+    color: #FFF;
+}
+
+.pagination span.disabled {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #eee;
+    color: #ddd;
+}
+
+span.arrow {
+    font-weight:normal;
+    font-size:0.9em;
+    color:#999;
+}
+
+span.field_error {
+    display: none;
+}
+
+span.thumb_box {
+    display: table-cell;
+    vertical-align:middle;
+    height: 95px;
+    width: 130px;
+    text-align:center;
+    /* hack for ie */
+    *display: block;
+    *font-size: 90px;
+    /* end */
+    border: 1px solid #ccc;
+}
+
+span.thumb_box img {
+    vertical-align:middle;
+}
+
+#search_engine_box h2 span {
+    color: black;
+}
+
+div.buttons span {
+    display: none;
+}
+
+.topic_title .pages span {
+    padding-left: 15px;
+    background-image: url(img/icon_minipost.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+div.quick_reply span {
+    padding: 0 50px 0 0;
+    color: #069;
+}
+
+div.quick_reply span.last {
+    padding: 0 0 0 110px;
+    color: gray;
+}
+
+.crumbs a, .crumbs span {
+    margin-left: 5px;
+}
+
+#slides span.pagination {
+    right: 580px;
+    top: 180px;
+    position: absolute;
+}
+
+span.locked {
+    color: gray;
+}
+
+.post_rate_box a span {
+    display: none;
+}
+
+#forum_advert_b2 span {
+    color: #E28822;
+    font-weight: bold;
+}
+
+body {
+  text-align: left;
+  font-family: Arial, sans-serifarial, Verdana, Helvetica;
+  font-size: 12px;
+  line-height: 1.5;
+  color: black;
+}

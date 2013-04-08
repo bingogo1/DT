@@ -1,0 +1,112 @@
+td.menuTabSelected {
+    background: #66CCFF;
+}
+td.menuTabUnselected {
+    background: #FFFF99;
+    font-size: 1.8em;
+}
+.menuItemTable {
+    background-color: #66CCFF;
+    color: black;
+    font-size: 1em;
+}
+.menuItemTable tr {
+	height: 1.3em;
+	font-size: 1.3em;
+}
+
+.menuSubItemTable {
+    background-color: #87CEFA;
+    color: black;
+}
+td.menuTabSelected a:link, td.menuTabSelected a:visited, td.menuTabSelected a:hover, td.menuTabSelected a:active {
+    color: black;
+}
+td.menuTabUnselected a:link, td.menuTabUnselected a:visited, td.menuTabUnselected a:hover, td.menuTabUnselected a:active {
+    color: black;
+}
+a.menuItemSelected:link, a.menuItemSelected:visited, a.menuItemSelected:hover, a.menuItemSelected:active {
+    color: black;
+}
+a.menuItemUnselected:link, a.menuItemUnselected:visited, a.menuItemUnselected:hover, a.menuItemUnselected:active {
+    color: black;
+}
+
+/* ----------------------------------------------------------------------
+Menu
+---------------------------------------------------------------------- */
+
+#menu h1 {
+    line-height: 120%;
+}
+
+div.menu-tl {
+    margin: 0px; 
+    padding: 0px; 
+    background: url("../images/menutab-tl.gif") no-repeat top left;   
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    display: table;
+}
+div.menu-tr {
+    margin: 0px; 
+    padding: 0px; 
+    background: url("../images/menutab-tr.gif") no-repeat top right;    
+    background-repeat: no-repeat;
+}
+
+td div.menu-tr div.menu-tl a {
+   display: table-cell;
+   vertical-align: middle;
+   padding: 3px 5px 0px 5px;
+   text-decoration: none;
+}
+
+.menuTabTable {
+    height: 25px;
+    _height: 16px; /* for IE */
+    margin: 0px; 
+    padding: 0px; 
+}
+td.menuTabSeparator {
+    width: 0px;
+}  
+td.menuTabSelected {
+    margin: 0px; 
+    padding: 0px; 
+    font-weight: bold;
+    vertical-align: top;
+}
+td.menuTabUnselected {
+  white-space:nowrap;
+  background-image:url(../cwc/img/nb_hover.gif);
+    background-repeat: repeat-x;
+  z-index:2;
+    padding: 3px 2px 3px 2px;
+    border-top:0px;
+  border-bottom:solid #000000 1px;
+  border-right:solid #000000 1px;
+  border-left:solid #e0e0e0 1px;
+    line-height: 16px;
+  text-decoration: none;
+    display: block;
+}
+
+.menuItemTable, .menuSubItemTable {
+    padding-right: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    height: 2px;
+    padding: 0px 0px 0px 10px;
+}
+
+.menuItemSelected {
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-weight: bold;
+}
+.menuItemUnselected {
+    padding: 0px 1px 0px 1px; /* TRBL */
+}

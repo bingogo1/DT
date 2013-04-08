@@ -1,0 +1,2573 @@
+
+/* (C) Copyright Hewlett-Packard Company, L.P. All Rights Reserved. */
+
+/*
+   HTML 4.01 and CSS2 compliant
+*/
+
+/******************************************************
+==    Global Declarations    ==
+******************************************************/
+a,div,span,td,input,textarea,select,button {
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  margin:0px;
+  padding:0px;
+  font-size: 12px;
+  color: #000000;
+  overflow:auto;
+  background-color: #ffffff;
+}
+
+a {
+  color: #0000CC;
+}
+
+a:hover {
+  color: #0000FF;
+}
+
+img {
+  border: 0px;
+}
+
+.requiredLabel span {
+  color: red;
+}
+
+.readonly {
+  background-color: #EBEBE4;
+  color: #000000;
+  border: 1px solid #7F9DB9;
+}
+/******************************************************
+==   CWC FRAMEWORK PIECES  ==
+******************************************************/
+/* Application Masthead */
+
+.applicationMastheadSmall{
+  color:#fff;
+  vertical-align:top;
+  background-color:#036;
+}
+
+.mastheadIcon{
+  padding-top:4px;
+  padding-left:12px;
+  padding-right:8px;
+}
+
+.mastheadTitle a{
+  font-weight:normal;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size:19px;
+  white-space:nowrap;
+  color:#fff;
+}
+
+.mastheadTitle{
+  font-weight:normal;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size:19px;
+  white-space:nowrap;
+  color:#fff;
+}
+
+div.mastheadPhoto {
+  border-left:6px solid #fff;
+  margin-left:8px;
+  float:right;
+}
+
+.mastheadLinks, mastheadLinks a {
+  font-weight:normal;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size:11px;
+  line-height: 13px;
+  padding:5px 16px;
+  white-space:nowrap;
+  border-left:6px solid #fff;
+  color:#fff;
+}
+
+.mastheadLinks a,.mastheadLinks a:hover{
+  color:#fff;
+}
+
+/* Framework Resizing Styles */
+
+.FWResizerHoriz {
+  border:0px;
+  padding:0px;
+  margin:0px;
+  width:auto;
+}
+
+.FWResizerVert {
+  background: #ededed url(../img/resizer_v.gif) left center;
+  border:0px;
+  padding:0px;
+  margin:0px;
+  background-repeat: no-repeat;
+}
+
+.cwcContentBody{
+  margin: 0px 6px 0px 6px;
+  border:solid #000 0px;
+  background-color: #fff;
+}
+
+.buttonImg{
+  height:16px;
+  width:16px;
+}
+
+.messageImg{
+  height:16px;
+  width:16px;
+}
+
+.printImg{
+  height:16px;
+  width:16px;
+}
+
+.doNothingImg{
+  height:16px;
+  width:16px;
+}
+
+.helpImg{
+  height:16px;
+  width:16px;
+}
+
+.pushTrayFrameworkDiv{
+  display:none;
+}
+
+.loginLogos{
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+#licensingLogos img{
+  margin: 3px;
+}
+/******************************************************
+==   CWC Login Styles   ==
+******************************************************/
+
+.loginContainer{
+  background-color: #ccc;/*back to #ccc*/
+}
+
+.loginLabel{
+  color:black;
+  font-size:11px;
+  width: 130px;
+  text-align:right;
+}
+
+.loginBrand{
+  width: auto;
+  height:287px;
+  background-color: #003366;
+  }
+
+.loginLogo{
+  margin: 0px;
+  padding: 20px 20px 0px 18px;
+  width: 42px;
+  height:287px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #fff;
+    vertical-align: top;
+  }
+
+.loginTitle{
+  margin: 0px;
+  padding:0px 28px 0px 0px;
+  width: 90%;
+  height:287px;
+  border-width:0px 0px 0px 0px;
+  border-style: solid;
+  border-color: #fff;
+  font-weight:normal;
+  font-size:28px;
+  color:#fff;
+  text-align:right;
+  }
+
+.loginImage{
+  margin: 0px;
+  padding: 0px;
+  width: 408px;
+  height:287px;
+  border-width: 0px 0px 0px 6px;
+  border-style: solid;
+  border-color: #fff;
+  }
+
+.loginForm{
+  border-width: 6px 0px 0px 0px;
+  border-style: solid;
+  border-color: #fff;
+  width: auto;
+  }
+
+.loginLabel{
+  margin: 0px;
+  padding:0px;
+  width: 70%;
+  font-weight:normal;
+  text-align:right;
+  border-width: 0px 0px 8px 0px;
+  border-style: solid;
+  border-color: #ccc;
+  }
+
+.loginInput{
+  margin: 0px;
+  padding:0px;
+  font-weight:normal;
+  text-align:left;
+  border-width: 0px 0px 10px 6px;
+  border-style: solid;
+  border-color: #ccc;
+  }
+
+.loginCopyright{
+  border-width: 0px 6px 0px 0px;
+  border-style: solid;
+  border-color: #ccc;
+  background-color: #ccc;
+  width: auto;
+  vertical-align: top;
+  text-align:left;
+  }
+
+/*TOOLBAR Image Buttons */
+
+div.toolbarButton {
+  background-image:url(../img/tool_bkground.gif);
+  background-repeat: repeat-x;
+  border:solid #AABBDD 1px;
+  white-space:nowrap;
+  text-decoration:none;
+  padding: 0px 2px 0px 0px;
+  margin: 0px 4px 0px 0px;
+  -moz-border-radius: 3px;
+}
+
+div.toolbarButton img{
+  margin: 1px 1px 1px 1px;
+  vertical-align: middle;
+}
+
+div.toolbarButton:hover{
+  background-image:url(../img/tool_hover_bkground.gif);
+  background-repeat: repeat-x;
+  border:solid #FFCC33 1px;
+  -moz-border-radius: 3px;
+}
+
+/* kludge for IE, we are switching div class onmouseover since :hover is not fully supported yet */
+div.toolbarButtonHover {
+  background-image:url(../img/tool_hover_bkground.gif);
+  background-repeat: repeat-x;
+  border:solid #FFCC33 1px;
+  white-space:nowrap;
+  text-decoration:none;
+  padding: 0px 2px 0px 0px;
+  margin: 0px 4px 0px 0px;
+  -moz-border-radius: 3px;
+}
+
+div.toolbarButtonHover img{
+  margin: 1px 1px 1px 1px;
+  vertical-align: middle;
+}
+
+a.toolbarButton{
+  text-decoration:none;
+}
+
+.buttonTray{
+  width:100%;
+  padding:0px;
+  margin:0px;
+}
+
+.bottomTray{
+  position:absolute;
+  z-index:0;
+  border:0px;
+  display:inline;
+  bottom:0px;
+  height:0px;
+  left:0px;
+}
+
+.breadcrumbTray{
+  position:absolute;
+  display:inline;
+  left:0px;
+  float:left;
+}
+
+.messageTray{
+  float:left;
+  position:absolute;
+  display:inline;
+  left:0px;
+  width: 100%;
+}
+
+.cwcToolButton{
+  float:left;
+  margin: 0px 0px 0px 0px;
+  padding: 2px 0px 0px 4px;
+}
+
+.toolButton img{
+  margin: 1px 1px 1px 1px;
+  vertical-align: middle;
+}
+
+.cwcSkipLink {
+  float: left;
+}
+
+/* FORMs and FORM BUTTONS */
+
+.formElement{
+  width: 200px;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  background-color:#ffffff;
+  border-color:#ffffff;
+  border-style:inset;
+  border-width:2px;
+  color:#000000;
+}
+
+
+.textAreaReadonly{
+  border-left:solid 1px #c0c0c0;
+  border-right:solid 1px #c0c0c0;
+  border-top:solid 1px #c0c0c0;
+  border-bottom:solid 1px #c0c0c0;
+}
+
+.formSectionHeading {
+  width: 100%;
+  background: #ccc;
+  font-weight: bold;
+  padding: 0px 0px 0px 4px ;
+  margin: 20px 0px 10px 0px ;
+}
+
+.formButtonContainer {
+  position:relative;
+  margin: 5px 0px;
+  padding: 3px;
+  border-width: 0px 0px 0px 0px;
+  border-style: solid;
+  border-color: #AABEDC;
+  background: #AABEDC;
+  white-space: nowrap;
+  width: 100%;
+  height: auto;
+}
+
+.formButtonContainer span label {
+  vertical-align: middle;
+}
+
+.formOptions {
+  position:absolute;
+  margin: 0px;
+  padding: 1px;
+  top:2px;
+  right:4px;
+}
+
+.formOptions a {
+  text-decoration: none;
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin: 2px;
+ }
+
+.FormLinkButton{
+  height:16px;
+  width:16px;
+  margin:0px;
+  padding:0px;
+}
+
+div.formHeading{
+  background: #ffffff url(../img/formHeader_Tile.gif);
+  background-repeat: repeat-x;
+  white-space:nowrap;
+  top:0px;
+  border:0px;
+  padding-left:0px;
+}
+
+/*Shared with CWC*/
+.formHeading{
+  color:#000099;
+  font-weight:bold;
+  font-size:13px;
+  padding: 2px 0px 0px 0px;
+}
+
+.formError{
+  color:#FF0000;
+  font-weight:bold;
+  font-size:11px;
+}
+
+
+
+/* TABS  whole section should be moved to Topaz.css as it is ServiceCenter only*/
+
+.tabBackground{
+  z-index:1;
+  overflow:hidden;
+  background-image:url(../img/tab_tile.gif);
+}
+
+.tabBorder{
+  color:#e0e0e0;
+  border:0px;
+}
+
+.tab{
+  white-space:nowrap;
+}
+
+.tab div{
+  background: #7591AC url("../img/tab_right.gif");
+  background-position:top right;
+  background-repeat:no-repeat;
+  white-space:nowrap;
+  z-index:2;
+  padding: 0px 4px 0px 4px;
+  line-height: 20px;
+  border-right:solid #ccc 0px;
+  border-left:solid #E0E0E0 2px;
+  border-bottom:solid #E0E0E0 1px;
+}
+
+.tab a{
+  padding: 0px 4px 2px 4px;
+  text-decoration:none;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight:bold;
+  color:#fff;
+}
+
+.tab a:hover{
+  padding: 0px 4px 2px 4px;
+  text-decoration:underline;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight:bold;
+  color:#fff;
+}
+
+.tabSelected{
+  white-space:nowrap;
+}
+
+.tabSelected div{
+  white-space:nowrap;
+  background-image:url(../img/selected.gif);
+  z-index:2;
+  padding: 1px 4px 2px 4px;
+  border-right:solid #e0e0e0 1px;
+  border-left:solid #e0e0e0 1px;
+  border-top:solid #e0e0e0 1px;
+  margin-left:2px;
+  border-bottom:solid #fff 1px;
+  line-height: 20px;
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
+}
+.tabSelected a{
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  padding: 1px 4px 2px 4px;
+  text-decoration:none;
+  font-size: 11px;
+  font-weight:bold;
+  color:#333;
+}
+
+.tabSelected_composite{
+  white-space:nowrap;
+  z-index:2;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  padding: 1px 4px 2px 4px;
+  text-decoration:none;
+  font-size: 11px;
+  font-weight:bold;
+  color:#333;
+}
+
+.tabSelected_composite_img{
+  white-space:nowrap;
+  z-index:2;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  padding: 1px 4px 2px 4px;
+  text-decoration:none;
+  font-size: 11px;
+  font-weight:bold;
+  color:#888;
+}
+
+.tabSelected_composite_img:hover{
+  white-space:nowrap;
+  z-index:2;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  padding: 1px 4px 2px 4px;
+  text-decoration:none;
+  font-size: 11px;
+  font-weight:bold;
+  color:#FF6600;
+}
+
+/* Search Engine Style Search Results  */
+
+.searchResults{
+  padding:4px;
+}
+.searchResults A{
+  color:#0000CC;
+  padding:4px;
+  font-weight:bold;
+}
+
+/* LABELS and TITLES*/
+.FieldLabel {
+  font-weight: Bold;
+  padding-left: 4px;
+  background-color: #ffffff;
+}
+
+.FieldLabelText {
+  font-weight: Bold;
+}
+
+.FieldText {
+  text-align: Left;
+  background-color: #ffffff;
+}
+
+.FormTitle {
+  color: #404040;
+  font-size: 11px;
+  font-weight: Bold;
+}
+
+.Header {
+  background-color: #EDF3FE;
+  font-size: 11px;
+  font-style: Italic;
+}
+
+/******************************************************
+==   CWC Messages and Alerts    ==
+******************************************************/
+
+#messageGeneric {
+  position:relative;
+  width: auto;
+  margin: 0px;
+  padding: 2px 4px 2px 4px;
+  border-width: 0px 0px 0px 0px;
+  border-style: solid;
+  border-color:#e0e2cb;
+  background: #f5e5c8;
+  font-weight:bold;
+  white-space: normal;
+ }
+
+ #messageGeneric img {
+  vertical-align:middle;
+  margin: 2px 4px 2px 2px;
+ }
+
+ #messageInfo {
+  width: auto;
+  margin: 0px;
+  padding: 2px 4px 2px 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color:#94cf65;
+  background: #B9F8E3;
+  font-weight:bold;
+  white-space: normal;
+ }
+
+ #messageInfo img {
+  vertical-align:middle;
+  margin: 2px 4px 2px 2px;
+ }
+
+#messageWarning {
+  width: auto;
+  margin: 0px;
+  padding: 2px 4px 2px 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color:#ffde53;
+  background: #ffffcc;
+  font-weight:bold;
+  white-space: normal;
+ }
+
+ #messageWarning img {
+  vertical-align:middle;
+  margin: 2px 4px 2px 2px;
+ }
+
+ #messageError {
+  width: auto;
+  margin: 0px;
+  padding: 2px 4px 2px 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color:#fe0000;
+  background: #ffcccc;
+  font-weight:bold;
+  white-space: normal;
+ }
+
+ #messageError img {
+  vertical-align:middle;
+  margin: 2px 4px 2px 2px;
+ }
+
+ #messageWarningDialog {
+  display: block;
+  position: relative;
+  margin: 4px 0px 2px 3px;
+  text-align: center;
+  display: block;
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  background: #ededed;
+ }
+
+.messageInfo, .messageWarning, .messageError, .messageGeneric {
+  width: auto;
+  margin: 0px;
+  padding: 2px 4px 2px 23px;
+  background: #ededed;
+  font-weight:bold;
+  white-space: normal;
+  border-width: 1px;
+  border-style: solid;
+  background-repeat: no-repeat;
+  background-position: 3px 1px;
+}
+
+.messageInfo {
+  border-color:#94cf65;
+  background-color: #B9F8E3;
+  background-image: url(../img/msg_info.gif);
+}
+
+.messageWarning {
+  border-color:#ffde53;
+  background-color: #FFFFCC;
+  background-image: url(../img/msg_warning.gif);
+}
+
+.messageError {
+  border-color:#FE0000;
+  background-color: #FFCCCC;
+  background-image: url(../img/msg_error.gif);
+}
+
+.messageGeneric {
+  border-color:#e0e2cb;
+  background-color: #F5E5C8; 
+  background-image: url(../img/msg_info.gif);
+}
+
+.messageClose {
+  display: inline;
+  float: right;
+}
+
+.messageClose img {
+  cursor: pointer;
+}
+
+.msgContextualIndicator {
+  background-image: url(../img/msg_warning.gif);
+  height: 16px;
+  width: 16px;
+  padding-right: 15px;
+  margin-right: 5px;
+  cursor: default;
+}
+
+.MessageTray{
+  display: none;
+}
+
+#cwc_MessageTray ul {
+  list-style-type: none;
+  margin: 0px 0px 0px 1px;
+  padding: 0;
+}
+
+#cwc_MessageTray li {
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+}
+
+.messageBody{
+  background:#FFFFCC;
+  margin:3px;
+}
+
+.MessageBar {
+  margin: 2px 0px 2px 4px;
+  color:#000099;
+  font-weight:bold;
+  font-size: 14px;
+  background-color:#FFFFCC;
+}
+
+.MessageBar a{
+  color:#000099;
+  background-color:#FFFFCC;
+  text-decoration: none;
+}
+
+a.MessageBar:HOVER {
+  color:#FF6600;
+  background-color:#FFFFCC;
+  text-decoration: none;
+}
+
+.Messages{
+  position:absolute;
+  top:4px;
+  left:4px;
+  width:70%;
+  height:20px;
+  overflow:hidden;
+  vertical-align:top;
+}
+
+.MessageText{
+  color:#000099;
+  font-weight:bold;
+  font-size: 11px;
+  text-decoration: none;
+  border-bottom:solid #FFCC33 1px;
+  border-right:0px;
+  border-top:0px;
+  border-left:0px;
+  background-color:#FFFFCC;
+}
+
+.normal {
+  padding: 0px;
+  margin: 0px;
+  color:black;
+}
+
+.normalOld {
+  padding: 6px 2px 2px 2px;
+  margin:4px;
+  color:black;
+  font-size:11px;
+}
+
+.critical {
+  margin:4px;
+  color: red;
+  font-weight: bold;
+  background-color:white;
+  font-size:11px;
+}
+
+.superCritical {
+  margin:4px;
+  color:white;
+  font-weight:bold;
+  background-color:red;
+  font-size:11px;
+}
+
+.mandatory {
+   color:red;
+   font-weight:bold;
+}
+
+/* Notebooks ,not for tabbed pane shared widget, whole section should be moved to Topaz.css and AC.css as it is ServiceCenter and AssetCenter only */
+.panel{
+  display:inline;
+  background-color: #ffffff;
+}
+
+.hiddenPanel{
+  display:none;
+  background-color: #ffffff;
+}
+
+.notebookBackground{
+  z-index:1;
+  overflow:hidden;
+  border: 0px;
+  background-image:url(../img/nb_background.gif);
+  background-repeat: repeat-x;
+}
+
+.NoteBook{
+  border-bottom:solid #999999 1px;
+  border-right:solid #999999 1px;
+  border-top:0px;
+  border-left:solid #999999 1px;
+  overflow:visible;
+  background-color: #ffffff;
+}
+
+.notebookTab{
+  white-space:nowrap;
+  background-image:url(../img/nb_unselected.gif);
+	background-repeat: repeat-x;
+  z-index:2;
+	padding: 3px 2px 3px 2px;
+	border-top:0px;
+  border-bottom:solid #999999 1px;
+  border-right:solid #999999 1px;
+  border-left:solid #e0e0e0 1px;
+	line-height: 16px;
+  text-decoration: none;
+	display: block;
+}
+
+.notebookTab:hover{
+  white-space:nowrap;
+  background-image:url(../img/nb_hover.gif);
+	background-repeat: repeat-x;
+  z-index:2;
+	padding: 3px 2px 3px 2px;
+	border-top:0px;
+  border-bottom:solid #000000 1px;
+  border-right:solid #000000 1px;
+  border-left:solid #e0e0e0 1px;
+	line-height: 16px;
+  text-decoration: none;
+	display: block;
+}
+
+.notebookTabSelected{
+  white-space:nowrap;
+  background-image:url(../img/nb_selected.gif);
+  background-repeat: repeat-x;
+  z-index:2;
+  padding: 3px 2px;
+  border-top:0px;
+  border-bottom:solid #ffffff 1px;
+  border-right:solid #bfbfbf 1px;
+  border-left:0px;
+  line-height: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+
+/******************************************************
+======  BEGIN <table class==listTable> ====
+******************************************************/
+/**** alignment and row selection styles **************/
+
+.listTableSelected{
+  background: #99CCFF;
+  border-bottom: #ccc 1px solid;
+  }
+
+tr.evenRow{
+  background: #F5F5F5;
+  color: #0000CC;
+  }
+
+tr.oddRow{
+  background: #EEEEEE;
+  color: #0000CC;
+  }
+
+tr.selectedRow{
+  background: #99CCFF;
+}
+
+.listContainer
+{
+  background: #f4f4f4;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+table.listTable{
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  margin:0px;
+  padding:0px;
+  font-size: 11px;
+  border-top: #ccc 0px solid;
+  border-bottom: #ccc 1px solid;
+  border-right: #ccc 1px solid;
+  background: #ffffff;
+  position:relative;
+}
+
+div.listTable{
+
+}
+.listTable TH{
+  background-color:#968F89;
+  font-size:11px;
+  font-weight:bold;
+  color:#fff;
+  border-top: #ccc 1px solid;
+  border-left: #ccc 1px solid;
+  padding:0px;
+  text-align: center;
+}
+
+.listTable TH A{
+  text-decoration: none;
+  color:#fff;
+}
+
+.listTable TH A:HOVER{
+  text-decoration: underline;
+  color:#fff;
+}
+
+.listTable TD{
+  border-top: 1px solid #CCCCCC;
+  border-left: #ccc 1px solid;
+  font-weight: normal;
+  padding:0px 4px 0px 4px;
+  color: #000000;
+}
+
+.listTable A{
+  color: #0000CC;
+  text-decoration: none;
+}
+
+.listTable A:HOVER{
+  text-decoration: underline;
+  color: #0000FF;
+}
+
+.listTable IMG{
+}
+
+.listTable TEXTAREA {
+  overflow-y: auto;
+}
+
+.listTableEnd {
+  border-right: #ccc 1px solid;
+}
+.listTableBreak TD{
+  border-top: #ccc 1px solid;
+  border-bottom: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+}
+
+.listNavigation{
+  background: #E0E0E0;
+  border: 0px;
+  padding:0px;
+  text-align: center;
+  line-height:10px;
+  white-space:nowrap;
+}
+
+.listNavigation div{
+  color: #000000;
+  border: 0px;
+  padding:0px;
+}
+
+.listNavigation TD{
+  border-top: #ccc 1px solid;
+  border-bottom: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+}
+
+.multiSelect {
+  text-align:center;
+  width:25px;
+}
+
+.singleSelect {
+  width:1px;
+}
+
+/**** Action Contols  <div class=cwc_tableActions> **************/
+ .cwc_tableActions {
+    position:relative;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-width: 0px 0px 0px 0px;
+  border-style: solid;
+  border-color: #ccc;
+  background: #ededed;
+  height: 24px;
+  white-space: nowrap;
+  }
+
+ .cwc_tableActions div {
+  position:absolute;
+  margin: 0px;
+  padding: 1px;
+  }
+
+ .cwc_tableActions span label {
+    vertical-align: middle;
+  }
+ /*
+ div.cwc_tableActions input,textarea,select,button {
+    vertical-align: middle;
+  margin: 0px;
+  padding: 0px;
+  }*/
+
+  .actionInput {
+    float: left;
+    height:24px;
+    position:relative;
+    left:4px;
+    top:0px;
+  }
+
+ .cwc_actionBox {
+   float: left;
+   margin: 2px 5px;
+ }
+
+  .tableOptions {
+   float:right;
+  }
+
+ .tableOptions a {
+  text-decoration: none;
+  background: url(../img/buttons/configure.gif) no-repeat left top;
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin: 2px;
+ }
+
+ .tableOptions a:hover {
+  background: url(../img/buttons/configure_over.gif) no-repeat left top;
+  margin: 2px;
+}
+
+/**** Filter Contols  <div class=cwc_cwc_tableFilter> **************/
+ .cwc_tableFilter{
+  display: none;
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: #e0e0e0;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  border-color: #e0e0e0;
+  clear:both;
+  line-height:20px;
+  height: 24px;
+  }
+
+ .cwc_tableActions fieldset, .cwc_tableFilter fieldset {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: #e0e0e0;
+  border-width:0px;
+  clear:both;
+  }
+
+  .cwc_tableActions div, .cwc_tableFilter div {
+  display: inline;
+  white-space: nowrap;
+  padding: 0px 4px 0px 4px;
+  margin: 0px;
+  }
+
+ .cwc_tableFilter textarea {
+  overflow:hidden;
+  }
+
+ .cwc_tableActions a, .cwc_tableFilter a {
+    text-decoration:none;
+  }
+
+ .cwc_tableActions legend, .cwc_tableFilter legend {
+ display:none;
+}
+
+.appliedFilter  {
+  float: right;
+  white-space: nowrap;
+  padding: 0px 4px 0px 4px;
+  margin: 0px;
+  }
+
+
+/**** Paging Contols  <div class=cwc_tablePaging> **************/
+.cwc_tablePaging {
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  background: #BDBDBD;
+  clear:both;
+  padding: 0px;
+}
+
+.cwc_tablePaging fieldset {
+  background-color: #bdbdbd;
+  border-width: 0px 0px 0px 0px;
+  border-style: solid;
+  border-color: #000;
+  position:relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.cwc_tablePaging {
+  position:relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+.cwc_tablePaging textarea {
+  overflow:hidden;
+}
+
+.cwc_tablePaging a {
+    text-decoration:none;
+}
+
+.cwc_tablePaging legend {
+	visibility:hidden;
+	display:none;
+}
+
+.pageRange {
+  white-space: nowrap;
+  padding: 0px 4px 0px 0px;
+  margin: 0px 4px 0px 0px;
+  float: left;
+  border-width:0px 1px 0px 0px;
+  border-style: solid;
+  border-color: #EEF0F2;
+}
+
+.pageRefs {
+  vertical-align: bottom;
+  bottom: 2px;
+  position: relative;
+}
+
+.pageCtrl {
+  float:right;
+}
+
+.pageRange input,textarea,select,button {
+  vertical-align: top;
+  position:relative;
+}
+
+.pageRange span {
+  vertical-align: bottom;
+  bottom: 2px;
+  position: relative;
+}
+
+.goToPage {
+  white-space: nowrap;
+  padding: 0px 3px 0px 4px;
+  margin: 0px 0px 0px 4px;
+}
+
+.goToLabel {
+  vertical-align: bottom;
+  bottom: 3px;
+  position: relative;
+}
+
+.recordCount {
+  float: left;
+  position:relative;
+  white-space: nowrap;
+  padding: 0px;
+  margin: 2px 0px 0px 4px;
+}
+
+.recCounter {
+  vertical-align: top;
+}
+
+/* not used */
+.refresh {
+  background: #bdbdbd url(../img/buttons/fwRefresh.gif) no-repeat center top;
+  height:16px;
+  width:16px;
+  border:0;
+  margin: 0 2px 0 0;
+  cursor: pointer;
+}
+
+.recordCountHidden {
+  display:none;
+}
+
+/******************************************************
+==   Table classes need to use listtTable styles   ==
+******************************************************/
+/* td for graphics only  change to .listTable IMG*/
+
+td.graphic  {
+  color: #000000;
+  font-weight: bold;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 125%;
+  border-bottom : none;
+  padding: 0%;
+  text-align : left;
+  vertical-align : top;
+}
+
+/******************************************************
+==   CWC TreeList Widget   ==
+******************************************************/
+.treeListTable{
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  text-align: left;
+  margin:0px;
+  padding:0px;
+  border:solid #ccc;
+  border-width:1px 0 1px 1px;
+  color: #000000;
+  background: #ffffff;
+}
+
+.treeListTable TD{
+  color: #000000;
+  text-align: left;
+}
+
+.treeListTable TH{
+  padding:4px 6px 4px 6px;
+  background-color:#968F89;
+  font-size:11px;
+  font-weight:bold;
+  color:#fff;
+  border-top: #ccc 1px solid;
+  border-left: #ccc 1px solid;
+}
+
+.treelistTable TH A{
+  text-decoration: none;
+  color:#fff;
+}
+
+.treelistTable TH A:HOVER{
+  text-decoration: underline;
+  color:#fff;
+}
+
+.treeListTable A{
+  color: #0000CC;
+  text-decoration: none;
+  padding:0px;
+  margin:0px;
+}
+
+.treeListTable A:HOVER{
+  text-decoration: underline;
+  color: #0000FF;
+}
+.treeListTable IMG{
+  border: 0px;
+  padding:0px;
+  margin:0px;
+  color: #000000;
+}
+
+.treenode{
+  border:solid #ccc;
+  border-width:0 1px 0 0;
+  margin:0px;
+  padding:0 4px 0 4px;
+}
+
+.treenode a {
+  text-decoration: none;
+}
+
+.treenodeSelected {
+  border:solid #ccc;
+  border-width:0 1px 0 0;
+  margin:0px;
+  padding:0 4px 0 4px;
+}
+
+.col2{
+  padding:4px 6px 4px 6px;
+  border:solid #ccc;
+  border-width:0 1px 0 0;
+}
+
+.col1{
+  padding:4px 6px 4px 6px;
+  border:solid #ccc;
+  border-width:0 1px 0 0;
+}
+.treefooter{
+  color: #000000;
+  background: #ccc;
+  border:solid #ccc;
+  border-width:0 1px 0 0;
+  padding:0 4px 0 4px;
+}
+
+/* FAVORITES MANAGER */
+.FavoritesMgrLogo{
+  position:absolute;
+  top:0px;
+  right:0px;
+  width:282px;
+  height:30px;
+  z-index:20;
+}
+
+.FavoritesMgrHead{
+  background: #ffffff url(../img/NavTopTile.gif);
+  background-repeat: repeat-x;
+  z-index:1;
+  white-space:nowrap;
+  width: 100%;
+  height:30px;
+}
+
+.FavoritesMgrHeading{
+  font-weight: bold;
+  font-size: 13px;
+  color: #8BBBEC;
+  position:absolute;
+  top:2px;
+  z-index:100;
+}
+
+.FavoritesMgrIframe{
+  margin: 0px 0px 2px 0px;
+  border: #999999 1px solid;
+}
+
+.FavoritesMgrHeading{
+  font-weight: bold;
+  font-size: 13px;
+  color: #8BBBEC;
+  position:absolute;
+  top:2px;
+  z-index:100;
+}
+
+/* About Dialog */
+.AboutBody{
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  overflow:hidden;
+}
+
+.AboutProductHeading{
+  color:#ffffff;
+  font-weight:normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:21px;
+  padding: 2px 0px 0px 0px;
+  position:absolute;
+  text-align: right;
+  right:20px;
+  width:auto;
+  height:21px;
+  z-index:0;
+  top:134px;
+}
+.AboutProductHeading img{
+  border-width:0px 6px 0px 0px;
+  border-style: solid;
+  border-color: #003366;
+  vertical-align: middle;
+}
+
+.AboutProductVersion{
+  color:#ffffff;
+  font-weight:normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:13px;
+  position:absolute;
+  text-align: right;
+  right:20px;
+  width:505px;
+  height:25px;
+  z-index:0;
+  top: 170px;
+}
+.AboutProductComponents{
+  color:#ffffff;
+  font-weight:bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:13px;
+  position:absolute;
+  text-align: right;
+  right:20px;
+  width:505px;
+  height:25px;
+  z-index:0;
+  top: 194px;
+}
+
+.AboutComponentList{
+  text-align:right;
+  color:#ffffff;
+  position:absolute;
+  overflow:auto;
+  z-index:0;
+  top:214px;
+  right:20px;
+  width:460px;
+  height:200px;
+  margin:0px;
+  padding: 0px 18px 0px 0px;
+  border:0px;
+}
+
+.AboutProductCopyright{
+  color:#ffffff;
+  position:absolute;
+  text-align: right;
+  font-size:10px;
+  right:20px;
+  width:505px;
+  height:25px;
+  z-index:0;
+  bottom: 38px;
+}
+
+.AboutFooter{
+  background: #ffffff;
+  white-space:nowrap;
+    position:absolute;
+  z-index:0;
+  bottom:0px;
+  left:0px;
+  width:505px;
+  height:35px;
+  margin:0px;
+  border:0px;
+}
+
+#AboutButtonBar{
+    position:absolute;
+  z-index:0;
+  top:6px;
+  left:420px;
+  width:505px;
+  height:25px;
+  margin:0px;
+  padding:0px;
+  border:0px;
+}
+
+.AboutButton{
+  height:22px;
+  width:70px;
+  margin:4px;
+  padding:0px;
+  float:right;
+}
+
+.AboutCompanyLink{
+  color:#ffffff;
+}
+
+.AboutBackground{
+  position:absolute;
+  z-index:0;
+  top:0px;
+  left:0px;
+  height:500px;
+  background: #ffffff url(../img/about_tile.gif);
+  background-repeat: repeat-y;
+  color:#ffffff;
+  border:0px;
+  margin:0px;
+  padding:0px;
+  width:505px;
+}
+
+.AboutBranding{
+  position:absolute;
+  z-index:0;
+  left:0px;
+  width:505px;
+  height:186px;
+  margin:0px;
+  padding:0px;
+  background: #ffffff url(../img/about_branding.gif);
+  background-repeat: no-repeat;
+  white-space:nowrap;
+  top:0px;
+  border:0px;
+}
+
+.jarLogo{
+  padding-bottom: 10px;
+}
+
+/******************************************************
+==   CWC Notebook Widget  OneVoice compliant ==
+******************************************************/
+.myFaces_panelTabbedPane{
+  overflow:hidden;
+  /*background: #000000 url(../img/nb_background.gif);*/
+  background-repeat: repeat-x;
+  border:solid #CCCCCC 0px;
+}
+
+.myFaces_panelTabbedPane_activeHeaderCell{
+  background-color: #cccccc;
+  z-index:2;
+  padding: 2px 6px 2px 1px;
+  margin: 0px 2px 0px 0px;
+  border: 0px;
+  height: 16px;
+  border-bottom:solid #CCCCCC 2px;
+}
+
+ div.myFaces_panelTabbedPane_activeHeaderCell input{
+  text-decoration: none;
+  font-weight:bold;
+  color:#000000;
+  background-color: #cccccc;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 4px 0px 4px;
+  overflow:visible;
+}
+
+ div.myFaces_panelTabbedPane_inactiveHeaderCell input{
+  cursor:pointer;
+}
+
+.myFaces_panelTabbedPane_inactiveHeaderCell,
+.myFaces_panelTabbedPane_disabledHeaderCell{
+    background: #7591AC url("../img/tab_right.gif");
+  background-position:top right;
+  background-repeat:no-repeat;
+  z-index:2;
+  padding: 2px 6px 2px 1px;
+  margin: 0px 2px 0px 0px;
+  border: 0px;
+  height: 16px;
+  border-bottom:solid #FFFFFF 2px;
+}
+
+ div.myFaces_panelTabbedPane_inactiveHeaderCell input,
+.myFaces_panelTabbedPane_disabledHeaderCell label{
+  text-decoration: none;
+  color:#ffffff;
+  font-weight:bold;
+  background-color: #7591AC;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 4px 0px 4px;
+  overflow:visible;
+}
+.myFaces_panelTabbedPane_activeHeaderCell input,
+.myFaces_panelTabbedPane_inactiveHeaderCell input,
+.myFaces_panelTabbedPane_disabledHeaderCell label,
+.myFaces_panelTabbedPane_emptyHeaderCell{
+  border-style: none;
+}
+
+/** Content of the notebook **/
+
+table.myFaces_panelTabbedPaneDetail{
+  padding: 0px 0px 0px 0px;
+  width:100%;
+  border-top:solid #cccccc 1px;
+  border-right:solid #cccccc 1px;
+  border-bottom:solid #cccccc 1px;
+  border-left:solid #cccccc 1px;
+}
+
+.myFaces_panelTabbedPaneDetail_pane tabContent,
+.myFaces_panelTabbedPaneDetail_pane{
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border:solid #bfbfbf 0px;
+}
+
+/******************************************************
+======  DataTable Options page table head ====
+******************************************************/
+
+.optionTableHead {
+  font-size:11px;
+  font-weight:bold;
+  text-align: center;
+}
+
+/******************************************************
+==    CWC Calendar Widget    ==
+******************************************************/
+/* Default attributes of table container for entire calendar */
+.jscalendar-DB-table-style {
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  border-width:1px;
+  border-style:solid;
+  border-color:#ccc;
+  background-color: #fff;
+}
+
+/* Default attributes of DIV containing table container for entire calendar.
+ * You probably don't want to alter this style.
+ */
+.jscalendar-DB-div-style {
+  z-index: 99;
+  position: absolute;
+  visibility: hidden;
+  left:0;
+  top:0;
+}
+
+/* Default attributes used in calendar title (month and year columns).*/
+.jscalendar-DB-title-style {
+  padding:2px;
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight:bold;
+  color:#fff;
+  cursor:default;
+}
+
+.jscalendar-DB-title-style a {
+  text-decoration: none;
+}
+
+
+#jscalendarCloseButton {
+	cursor: pointer;
+}
+
+/* Default attributes used in calendar title background.*/
+.jscalendar-DB-title-background-style {
+  background-color: #7591AC;
+}
+
+/* Normal appearance of controls in calendar title. */
+/* Note: The right, left and down icons are images, jscalendar-DBich must be edited if you need to change them. */
+.jscalendar-DB-title-control-normal-style {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #7591AC;
+  cursor: pointer;
+  color:#fff;
+}
+
+/* Moused-over (selected) appearance of controls in calendar title. */
+
+.jscalendar-DB-title-control-select-style {
+
+}
+
+/* Default attributes of drop down lists (month and year). */
+.jscalendar-DB-dropdown-style {
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* Default attributes selected (mouse-over) item in drop down lists (month and year). */
+.jscalendar-DB-dropdown-select-style {
+  background-color: #99CCFF;
+}
+
+/* Default attributes unselected (mouse-off) item in drop down lists (month and year). */
+.jscalendar-DB-dropdown-normal-style {
+  background-color: #fff;
+}
+
+/* Default attributes of calendar body (weekday titles and numbers). background for div containing dates */
+.jscalendar-DB-body-style {
+  background-color: #fff;
+  font-size: 11px;
+  cursor:default;
+}
+
+.jscalendar-DB-body-style td {
+ /* background-color: #f0f0f0; */
+}
+
+/* Attributes of current day in calendar body. */
+.jscalendar-DB-current-day-style {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #a0a0a0;
+  background-color: #7591AC;
+  cursor: pointer;
+}
+
+/* Attributes of end-of-week days (Sundays) in calendar body. */
+.jscalendar-DB-end-of-weekday-style {
+  color: #666;
+  text-decoration: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Attributes of all other days in calendar body. */
+.jscalendar-DB-normal-day-style {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+/*Mouse over attribute for dates */
+.jscalendar-DB-would-be-selected-day-style {
+  background-color: #99CCFF;
+  color: #003366;
+}
+
+/* Attributes of border around selected day in calendar body. */
+.jscalendar-DB-selected-day-style {
+  color: #fff;
+  font-weight: bold;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #7591AC;
+  background-color: #003366;
+}
+
+/* Default attributes of designated holidays. */
+.jscalendar-DB-holiday-style {
+  background-color: #000;
+}
+
+/* Attributes of today display at bottom on calendar */
+.jscalendar-DB-today-style {
+  padding: 0px;
+  color: #666;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  height:16px;
+}
+
+/* Attributes of today display label at bottom on calendar */
+.jscalendar-DB-today-lbl-style {
+  padding: 5px;
+  cursor:default;
+}
+
+/* Attributes of week number division (divider.gif) */
+.jscalendar-DB-weeknumber-div-style {
+  background-color: #d0d0d0;
+  padding: 0px;
+}
+
+.jscalendar-DB-image-style {
+  vertical-align:bottom;
+  cursor:pointer;
+}
+
+/********************************
+Column Selection and configuration
+*********************************/
+.listConfigurationButton div{
+  border: solid #FFFFFF 1px;
+}
+
+.listConfigurationButton:hover div{
+  border:solid #0066CC 1px;
+  background-color:#6699CC;
+}
+
+.listConfigurationButtonDisabled div{
+  border: solid #999999 1px;
+  background-color:#CCCCCC;
+}
+
+.columnSelectAvailable {
+  position: absolute;
+  left: 8px;
+  top: 20px;
+}
+
+.columnSelectSelect{
+  width: 150px;
+}
+
+.columnSelectAddRemove{
+  position: absolute;
+  left: 175px;
+  top: 60px;
+}
+
+.columnSelectButton{
+  width: 125px;
+}
+
+.columnSelectDisplayed{
+  position: absolute;
+  left: 316px;
+  top: 20px;
+}
+
+.columnSelectBottomButton{
+  position: absolute;
+  left: 215px;
+  top: 215px;
+}
+
+.toolButton div{
+  background-image:url(../img/tool_bkground.gif);
+  background-repeat: repeat-x;
+  border:solid #AABBDD 1px;
+  white-space:nowrap;
+  text-decoration:none;
+  padding: 0px 2px 0px 0px;
+  -moz-border-radius: 3px;
+}
+
+.toolButton img{
+  margin: 1px 1px 1px 1px;
+  vertical-align: middle;
+}
+
+.toolButton:hover div{
+  background-image:url(../img/tool_hover_bkground.gif);
+  background-repeat: repeat-x;
+  border:solid #FFCC33 1px;
+  -moz-border-radius: 3px;
+}
+
+.toolButton{
+  text-decoration:none;
+}
+
+/******************************************************
+==   Message Queue   ==
+******************************************************/
+#clearMessages{
+  color: #000000;
+  background: #f4f4f4;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.messageQueueBody{
+    background: #f4f4f4;
+    margin:0px;
+    padding:0px;
+}
+
+/******************************************************
+==   CWC DIV id=docTable    ==
+******************************************************/
+ #docTable {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+#docTable table{
+  font-family: Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  width: 100%;
+  margin: 0px;
+  padding: 2px;
+  border-top: #ccc 1px solid;
+  border-bottom: #ccc 1px solid;
+  border-right: #ccc 1px solid;
+  border-left: #ccc 1px solid;
+  color: #000000;
+  background: #ffffff;
+}
+
+#docTable TD{
+  border-left: #ccc 2px solid;
+  font-weight: normal;
+  padding: 2px 6px 2px 6px;
+  color: #000000;
+}
+
+#docTable TH{
+  border-top: #ccc 1px solid;
+  border-left: #ccc 1px solid;
+  font-weight: normal;
+  padding: 2px 6px 2px 6px;
+  background: #E0E0E0;
+  text-align: left;
+}
+
+#docTable A{
+  color: #0000CC;
+  text-decoration: none;
+}
+
+#docTable A:HOVER{
+  text-decoration: underline;
+  color: #0000FF;
+}
+
+/******************************************************
+==   CWC Java help styles   ==
+******************************************************/
+
+.helpMastheadLinkBorder {
+  padding: 2px 2px 0px 2px;
+  white-space:nowrap;
+  border-left:6px solid #fff;
+  color:#fff;
+  background-color:#ccc;
+}
+.helpMastheadLink {
+  padding: 2px 2px 0px 2px;
+  background-color:#ccc;
+}
+.helpButtons{
+  position:absolute;
+  top:8px;
+  right:0px;
+  margin:0px;
+  padding:0px;
+  z-index: 4;
+}
+
+.helpScroller{
+  border:1px;
+  overflow: auto;
+  width:100%;
+  height:375px;
+}
+
+#cwc_helpContent{
+  margin-left:10px;
+  margin-right:0px;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:0px;
+}
+
+/*  toolbar   */
+
+.helpToolButton{
+  border: solid #ccc 1px;
+  display: block;  
+}
+
+.helpToolButton:hover{
+  border: solid #e7e7e7 1px;
+  background-color:#e7e7e7;
+}
+
+.helpToolButtonDisabled img{
+  border: solid #ccc 1px;
+  background-color:#ccc;
+}
+/*--------------------------------------------------------*/
+/*  HEADINGS                                              */
+/*--------------------------------------------------------*/
+
+h1  {
+  background-color: #FFFFFF;
+  color: #003399;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+H2  {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+h3  {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+H4  {
+  font-weight: bold;
+  font-size: 1.0em;
+}
+
+/*--------------------------------------------------------*/
+/*  MONOSPACED TEXT                                       */
+/*--------------------------------------------------------*/
+
+pre, code, tt  {
+  font-family: "Courier New", Courier, "Lucida Console", monospace;
+  font-size: 1.0em;
+}
+
+/* superscripts and trademarks */
+
+sup {
+  font-size: 10px;
+}
+
+/* monospaced text for file names */
+
+tt {
+  color:#000000;
+  background-color : #D3D3D3;
+  line-height: normal;
+}
+
+/******************************************************
+==   Perspective Styles    ==
+******************************************************/
+#cwc_main_view .mainLayoutContainer{
+  background-color: #ffffff;
+  border: 0px solid #000000;
+}
+
+#cwc_main_view{
+}
+
+.uiPart{
+  margin: 4px;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #868686;
+}
+
+.uiPartTitle{
+  padding: 2px 6px 2px 6px;
+  border-width: 0px;
+  font-size: 11px;
+  font-weight: bold;
+  background: #ccc url(../img/nb_unselected.gif);
+  background-repeat: repeat-x;
+}
+
+
+body .dijitSplitContainerSizerV {
+  background: #ededed url(../img/dojo_resizer_v.gif) top center;
+  background-repeat: no-repeat;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  height: 6px;
+}
+
+body .dijitSplitContainerSizerH {
+  background: #ededed url(../img/dojo_resizer_h.gif) left center;
+  background-repeat: no-repeat;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 6px;
+}
+
+/* Alignment overrides - these need to be last if they are to get applied correctly */
+.leftAlign, th.leftAlign {
+  text-align:left;
+}
+
+.centerAlign, th.centerAlign {
+  text-align:center;
+}
+
+.rightAlign, th.rightAlign {
+  text-align:right;
+}
+
+#TopTray {
+  display:none;
+}
+
+#ToolTrayExt {
+  display:none;
+}
+
+#ButtonTray {
+  display:none;
+}
+
+#BottomTray {
+  display:none;
+}
+
+#MessageTray {
+  display:none;
+}
+
+/******************************************************
+==   Menu bar Styles    ==
+******************************************************/
+
+div.dojoDialog{
+	background : #eee;
+	border : 1px solid #999;
+	padding : 4px;
+	-moz-border-radius : 5px;
+}
+
+.cwcWorkspaceSelector {
+  float: left;
+  margin-top: 2px;
+}
+
+.cwcWorkspaceLabel {
+  float: left;
+  color: white;
+  font-weight: bold;
+  margin: 4px 4px 0px 4px
+}
+
+.cwcWorkspaceSelector select {
+  margin: 0px 10px;
+}
+
+.cwcWorkspaceSelector label {
+  color: #fff;
+  padding-top: 2px;  
+  vertical-align: middle;
+}
+
+.cwcMenuBar {
+  position: relative;
+  display: inline;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  outline: none;
+  background: #7591AC;
+}
+
+.cwcMenuBarContainer {
+  height: 25px;
+  background: #7591AC;
+  border-bottom: 4px solid #3F658C;
+  border-top: 4px solid #FFFFFF;
+}
+
+.cwcMenuItem {
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  z-index: 1;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  display: inline;/* needed in khtml to display correctly */
+  display: -moz-inline-box;/* needed in firefox */
+  cursor:pointer;
+  \height:13px !important; /* set height for firefox */
+  height: 100%;						 /* set height for IE */
+}
+
+.cwcMenuItem a, .cwcMenuItem a:hover{
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.cwcMenuItemHover {
+  background: #3F658C;
+}
+
+.cwcPopupMenu{
+  background: #FFFFFF;
+  position: absolute;
+  border: 1px solid #3F658C;
+  padding: 1px;
+  margin: 0px;
+}
+
+.cwcPopupMenuItem,
+.cwcPopupMenuItemDisable {
+  white-space: nowrap;
+  font-family: Arial,sans-serif;
+  margin: 0;
+}
+
+.cwcPopupMenuItemDisable{
+	color: #D3D3D3;
+}
+
+.cwcPopupMenuItemDisable a,
+.cwcPopupMenuItemDisable a:hover{
+  color: #D3D3D3;
+}
+
+.cwcPopupMenuItem a,
+.cwcPopupMenuItem a:hover,
+.cwcPopupMenuItemDisable a,
+.cwcPopupMenuItemDisable a:hover {
+  font-family: Arial,sans-serif;
+  text-decoration: none;
+  color: #000000;
+}
+
+.cwcPopupMenuItemDisable a,
+.cwcPopupMenuItemDisable a:hover{
+  color: #D3D3D3;
+}
+
+.cwcPopupMenuItemHover {
+  background: #99CCFF;
+}
+
+.cwcMenuItemLabel,
+.cwcMenuItemLabelDisable {
+  position: relative;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+.cwcMenuItemLabelDisable {
+  color: #D3D3D3;
+}
+
+.fileMenuItem {
+  vertical-align: middle;
+  margin-left:4px;
+}
+
+.cwc_inputDate{
+  display : inline;
+  margin: 0px;
+  padding: 0px;
+}
+
+.cwc_inputDate fieldset{
+  display:inline;
+  border-width : 0px;
+  vertical-align : middle;
+}
+
+.cwc_inputDate legend {
+  display:none;
+}
+
+.cwc_inputDate input {
+  vertical-align: middle;
+  margin-top:2px;
+  padding:0px;
+  height:20px;
+}
+
+.cwc_inputDate select {
+  vertical-align: middle;
+  margin-top:1px;
+  padding:0px;
+}
+
+.hiddenLabel {
+  position:absolute;
+  overflow : hidden;
+  top : -999px;
+  left : 0px;
+  width : 1px;
+  height : 1px;
+
+}
+
+.shortcutOptions {
+  width:10px;
+  height:16px;
+  top:2px;
+  right:4px;
+}
+
+a.shortcutOptions {
+  text-decoration: none;
+  background: url(../img/buttons/configShortcut.gif) no-repeat left top;
+  width: 10px;
+  height: 16px;
+  display: block;
+}
+
+a.shortcutOptions:hover {
+  background: url(../img/buttons/configShortcut_over.gif) no-repeat left top;
+}
+
+/* Don't add floats to balloon styles... they mess up its workings */
+.balloonHelpTitle {
+  color: #fff;
+  background-color: #968F89;
+  font-weight:bold;
+}
+
+div.balloonHelpTitle a {
+  background: url(../img/buttons/close.gif) no-repeat left top;
+  width: 12px;
+  height: 10px;
+}
+
+.cwcBalloonPlaceholder {
+}
+
+.dijitTooltipContainer {
+  border:1px solid #003366 !important;
+  padding: .1em !important;
+}
+
+.tundra .dijitTooltipContainer {
+  background-color: #7591AC !important;
+}
+
+.tundra .dijitTooltipBelow .dijitTooltipConnector {
+  /* the arrow piece for tooltips below an element */
+  top: 1px !important;
+  left: 3px;
+  background:url("../img/balloontooltip/tooltipConnectorUp.png") no-repeat top left !important;
+  width:16px;
+  height:14px;
+}
+
+.dj_ie6 .tundra .dijitTooltipBelow .dijitTooltipConnector {
+  background-image: url("../img/tooltipConnectorUp.gif") !important;
+}
+
+.dijitTooltipAbove {
+  /* leave room for arrow below content; changed from 13px to 12px to hide the connector image's solid horizontal line */
+  padding-bottom: 12px !important;
+}
+
+.tundra .dijitTooltipAbove .dijitTooltipConnector {
+  /* the arrow piece for tooltips above an element */
+  bottom: 0px;
+  left: 3px;
+  background:url("../img/tooltipConnectorDown.png") no-repeat top left !important;
+  width:16px;
+  height:14px;
+}
+
+.dj_ie6 .tundra .dijitTooltipAbove .dijitTooltipConnector {
+  background-image: url("../img/tooltipConnectorDown.gif") !important;
+}
+
+.tundra .dijitTooltipLeft .dijitTooltipConnector {
+  /* the arrow piece for tooltips to the left of an element, bottom borders aligned */
+  right: 0px;
+  bottom: 7px;
+  background:url("../img/tooltipConnectorRight.png") no-repeat top left !important;
+  width:16px;
+  height:14px;
+}
+
+.dj_ie6 .tundra .dijitTooltipLeft .dijitTooltipConnector {
+  background-image: url("../img/tooltipConnectorRight.gif") !important;
+}
+
+.tundra .dijitTooltipRight .dijitTooltipConnector {
+  /* the arrow piece for tooltips to the right of an element, bottom borders aligned */
+  left: 0px;
+  bottom: 7px;
+  background:url("../img/tooltipConnectorLeft.png") no-repeat top left !important;
+  width:16px;
+  height:14px;
+}
+
+.tundra .dijitPopup div,
+.tundra .dijitPopup table {
+	opacity: 1 !important; 
+}
+
+
+.dj_ie6 .tundra .dijitTooltipRight .dijitTooltipConnector {
+  background-image: url("../img/tooltipConnectorLeft.gif") !important;
+}
+
+
+.cwcButton {
+  background: transparent url(../img/buttonbg.gif) repeat-x scroll left top;
+  border:solid #808080 1px;
+  vertical-align: bottom;
+}
+
+.cwcButtonMouseDown {
+  background: transparent url(../img/buttonbg.gif) repeat-x scroll left top;
+  border:solid #808080 1px;
+}
+
+.cwcButtonOver {
+  background: transparent url(../img/buttonbgover.gif) repeat-x scroll left top;
+  border:solid #808080 1px;
+}
+
+.cwcButtonDisabled {
+  background-color: #eeeeee;
+  border: solid #ccc 1px;
+  height: 18px;
+  *height: 19px;
+  vertical-align: bottom;
+}
+
+ 
+ /*** Item selector ***/
+ .x-ie-shadow{
+ 	display:none;
+ 	position:absolute;
+ 	overflow:hidden;
+ 	left:0;
+ 	top:0;
+ 	background:#777;
+ 	zoom:1;
+ }
+ 
+ .ext-shim{
+ 	position:absolute;
+ 	visibility:hidden;
+ 	left:0;
+ 	top:0;
+ 	overflow:hidden;
+ }
+ 
+ .ux-mselect{
+     overflow:auto;
+     background:white;
+     position:relative; /* for calculating scroll offsets */
+     zoom:1;
+     overflow:auto;	
+ }
+ .ux-mselect-item{
+     font:normal 12px tahoma, arial, helvetica, sans-serif;
+     padding:2px;
+     border:1px solid #fff;
+     white-space: nowrap;
+     cursor:pointer;
+ }
+ .ux-mselect-selected{
+ 	border:1px dotted #a3bae9 !important;
+     background:#DFE8F6;
+     cursor:pointer;
+ }
+ 
+.disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default !important;	
+}
+
+ div.cwc-itemselector-top {
+     background: transparent url(../img/top.gif) no-repeat scroll 0%;
+     width:16px !important;
+     height:16px !important;
+     margin:6px 10px;
+     cursor:pointer;
+ }
+ div.cwc-itemselector-up {
+     background: transparent url(../img/up.gif) no-repeat scroll 0%;
+     width:16px !important;
+     height:16px !important;
+     margin:6px 10px;
+     cursor:pointer;
+ }
+ div.cwc-itemselector-down {
+     background: transparent url(../img/down.gif) no-repeat scroll 0%;
+     width:16px !important;
+     height:16px !important;
+     margin:6px 10px;
+     cursor:pointer;
+ }
+ div.cwc-itemselector-bottom {
+     background: transparent url(../img/bottom.gif) no-repeat scroll 0%;
+     width:16px !important;
+     height:16px !important;
+     margin:6px 10px;
+     cursor:pointer;
+ }
+ div.cwc-itemselector-left {
+     background: transparent url(../img/left.gif) no-repeat scroll 0%;
+     width:16px !important;
+     height:16px !important;
+     margin:6px 10px;
+     cursor:pointer;
+ }
+ div.cwc-itemselector-right {
+     background: transparent url(../img/right.gif) no-repeat scroll 0%;
+     width:16px !important;
+     height:16px !important;
+     margin:6px 10px;
+     cursor:pointer;
+ }
+ /*** Ext.panel {border:false} seems to have no effect, so need to override some css to turn off the border  **/
+ div.x-panel-body-noheader {
+     border-top: 0px none white
+ }
+ 
+ div.x-panel-body { 
+     background:white none repeat scroll 0%;
+     overflow:hidden;
+     border: 0px none white
+ }
+ 
+ /* End of Item selector rules */
+

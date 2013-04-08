@@ -1,0 +1,20 @@
+Welcome to BTO Glossary Review Tool.
+
+  The BTO Glossary Review Tool is a Field Review Tool whose purpose is to centralize the Term Review Process and reduce distributed communications channels to one centralized information channel for all Term Reviews.
+   
+  <<Background>>
+
+  The LPM team members working on product Localization maintain language specific glossaries. Terms for a product are provided to translation vendors who translate them. These Terms and their corresponding translation are then stored as a Glossary for the Product. Each translated Term, must be reviewed by an LPM for correctness of translation and appropriateness for Product.
+
+  In the past each LPM has created and maintained their own Spreadsheet glossaries and this has reduced the ability to consolidate and centrally maintain quality of these glossaries. 
+
+  Thus the BTO Glossary Review Tool enables the centralization and standardization of LPM glossaries.
+
+  <<Features>>
+
+  The BTO Glossary Review provides a Review workflow for each Glossary. It also provides the ability to import Glossaries from Excel (pre-defined template) spread sheets and allows searching and sorting by Product, Version and Language as well as by Review Status and Reviewer. Finally Glossaries can also be exported and provided to external vendor as a translation guide to aid their Product Term translation.
+
+      
+      []
+
+=======================================================================

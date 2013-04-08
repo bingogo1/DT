@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MenuConfig>
+    <Displayers>
+        <Displayer name="Velocity" type="net.sf.navigator.displayer.VelocityMenuDisplayer"/>
+    </Displayers>
+    <Menus>
+        <Menu name="MainMenu" title="mainMenu.title" width="100" page="/mainMenu.action"/>
+        <Menu name="LangMgmtMenu" title="langMgmtMenu.title" width="100" page="/langMgmt.action"/>
+     
+        <Menu name="ProductMgmtMenu" title="productMgmtMenu.title" width="100" page="/productMgmt.action"/>
+        <Menu name="ProductCentMgmtMenu" title="productMgmtMenu.title" width="100" page="/productCenterMgmt.action"/>
+        <Menu name="PLineMgmtMenu" title="pLineMgmtMenu.title" width="100" page="/productLineMgmt.action"/>
+        
+        <Menu name="UserMenu" title="menu.user" description="User Menu" width="100" page="/editProfile.action"/>
+        <Menu name="UserMgmtMenu" title="userMgmtMenu.title" width="100" page="/userMgmt.action"/>
+        <Menu name="Logout" title="user.logout" width="100" page="/logout.jsp" />
+    </Menus>
+</MenuConfig>

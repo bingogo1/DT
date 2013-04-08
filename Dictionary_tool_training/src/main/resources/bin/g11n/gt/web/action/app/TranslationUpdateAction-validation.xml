@@ -1,0 +1,39 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0//EN" 
+    "http://www.opensymphony.com/xwork/xwork-validator-1.0.dtd">
+ <validators>
+    <field name="translation.languageId.id">
+        <field-validator type="required" >
+            <message key="errors.required" />
+        </field-validator>
+    </field> 
+    
+    <field name="translation.translatedValue">
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">0</param>
+            <param name="maxLength">1000</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    <field name="translation.reviewHisId.currentReviewId.reviewComment">
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">0</param>
+            <param name="maxLength">1000</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    <field name="translation.reviewHisId.currentReviewId.reviewSuggestion">
+        <field-validator type="stringlength">
+            <param name="trim">false</param>
+            <param name="minLength">0</param>
+            <param name="maxLength">1000</param>
+            <message key="errors.stringLength"/>  
+        </field-validator>
+    </field> 
+        
+    
+        
+</validators>      

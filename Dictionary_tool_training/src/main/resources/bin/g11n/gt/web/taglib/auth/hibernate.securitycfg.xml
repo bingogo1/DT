@@ -1,0 +1,11 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- Note: this file is only used by AppContext.java fro security purpose, please don't add any content into it.-->
+
+<hibernate-configuration>
+    <session-factory>
+        <mapping class="bin.g11n.gt.model.User"/>
+        <mapping class="bin.g11n.gt.model.Role"/>
+        <mapping class="bin.g11n.gt.model.Function"/>
+    </session-factory>
+</hibernate-configuration>

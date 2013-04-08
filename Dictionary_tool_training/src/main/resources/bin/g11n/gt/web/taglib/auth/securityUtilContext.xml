@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+<!-- Note: this file is only used by AppContext.java fro security purpose, please don't add any content into it.-->
+
+	<!-- Hibernate SessionFactory --> 
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation"
+			value="classpath:/com/hp/g11n/gt/web/taglib/auth/hibernate.securitycfg.xml"/>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=${hibernate.dialect}
+				<!-- bguo don't update schema automatically:
+				hibernate.hbm2ddl.auto=update
+				-->
+				hibernate.query.substitutions=true 'Y', false 'N'
+				hibernate.show_sql=${hibernate.show_sql}
+                hibernate.cache.use_second_level_cache=true
+                hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
+			</value>
+			<!-- Turn batching off for better error messages under PostgreSQL -->
+			<!-- hibernate.jdbc.batch_size=0 -->
+		</property>
+	</bean>
+
+	<bean id="userManager"
+		class="bin.g11n.gt.service.impl.common.UserManagerImpl">
+		<property name="userDao" ref="userDao" />
+	</bean>
+    
+	<!-- UserDao: Hibernate implementation -->
+	<bean id="userDao"
+		class="bin.g11n.gt.service.impl.common.UserDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- RoleDao: Hibernate implementation -->
+	<bean id="roleDao"
+		class="bin.g11n.gt.service.impl.common.RoleDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="functionDao"
+		class="bin.g11n.gt.service.impl.common.FunctionDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+</beans>

@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        
+<!-- common POJOs start  -->
+        <mapping class="bin.g11n.gt.model.User"/>
+        <mapping class="bin.g11n.gt.model.Role"/>
+        <mapping class="bin.g11n.gt.model.Function"/>
+     
+<!-- common POJOs end -->
+        
+<!-- application master POJOs start  -->
+        <mapping class="bin.g11n.gt.model.Bu"/>       
+        <mapping class="bin.g11n.gt.model.Product"/>       
+        <mapping class="bin.g11n.gt.model.ProductCenter"/>       
+        <mapping class="bin.g11n.gt.model.ProductLine"/>       
+<!-- application master POJOs end -->
+
+    </session-factory>
+</hibernate-configuration>

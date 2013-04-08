@@ -1,0 +1,108 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <package name="gt" extends="default">
+        <action name="mainMenu" class="com.opensymphony.xwork2.ActionSupport">
+            <result name="success">/app/mainMenu.jsp</result> 
+        </action> 
+
+        <action name="userMgmt" class="bin.g11n.gt.web.action.UserSearchAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="input">/common/user-search.jsp</result> 
+            <result name="search">/common/user-search.jsp</result> 
+            <result name="success">/common/user-search.jsp</result> 
+        </action>
+        
+        <action name="addUser" class="bin.g11n.gt.web.action.AddUserAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="error" >/common/user-add.jsp</result>
+            <result name="input">/common/user-add.jsp</result>
+            <result name="success" >/common/user-search.jsp</result>
+            <result name="existedCD" >/common/user-add.jsp</result>
+            <result name="cancel" type="redirect">/common/user-add.jsp</result>
+        </action>
+        
+        <action name="updateUser-*" class="bin.g11n.gt.web.action.UpdateUserAction">
+            <interceptor-ref name="crudStack">
+              <param name="validation.excludeMethods">execute</param>
+            </interceptor-ref>
+            <param name="id">{1}</param>
+            <result name="cancel" >/common/user-search.jsp</result>
+            <result name="error" >/common/user-update.jsp</result>
+            <result name="input">/common/user-update.jsp</result>
+            <result name="success" >/common/user-update.jsp</result>
+        </action>
+        
+        <action name="editProfile" class="bin.g11n.gt.web.action.UserProfileAction">
+            <interceptor-ref name="crudStack">
+              <param name="validation.excludeMethods">execute</param>
+            </interceptor-ref>
+            <result name="error" >/common/user-profile.jsp</result>
+            <result name="input">/common/user-profile.jsp</result>
+            <result name="success" >/common/user-profile.jsp</result>
+        </action>
+        
+        <!-- User-Role Assign Management -->
+        <action name="assignUserRole" class="bin.g11n.gt.web.action.UserRoleAssignAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="input">/common/user_role-assign.jsp</result>
+            <result name="assignCheck">/common/user_role-assign.jsp</result>
+            <result name="assign">/common/user_role-assign.jsp</result>
+            <result name="success">/common/user_role-assign.jsp</result>
+        </action>
+
+        <!-- Role-Function Assign Management -->
+        <action name="assignRoleFunction" class="bin.g11n.gt.web.action.RoleFunctionAssignAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="input">/common/role_function-assign.jsp</result>
+            <result name="assignCheck">/common/role_function-assign.jsp</result>
+            <result name="assign">/common/role_function-assign.jsp</result>
+            <result name="success">/common/role_function-assign.jsp</result>
+        </action>
+
+        <action name="flushCache" class="com.opensymphony.xwork2.ActionSupport">
+            <result name="success">/common/flushCache.jsp</result> 
+        </action> 
+
+        
+
+        <action name="productCenterMgmt" class="bin.g11n.gt.web.action.app.ProductCenterMgmtAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="input">/app/productCenter-new.jsp</result>
+            <result name="error">/app/productCenter-new.jsp</result>
+            <result name="add">/app/productCenter-new.jsp</result>
+            <result name="search">/app/productCenter-mgmt.jsp</result>
+            <result name="success">/app/productCenter-mgmt.jsp</result>
+        </action>
+
+        <action name="productMgmt" class="bin.g11n.gt.web.action.app.ProductMgmtAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="input">/app/product-new.jsp</result>
+            <result name="error">/app/product-new.jsp</result>
+            <result name="add">/app/product-new.jsp</result>
+            <result name="search">/app/product-mgmt.jsp</result>
+            <result name="success">/app/product-mgmt.jsp</result>
+        </action>
+    
+		<!-- Role management -->
+        <action name="roleMgmt" class="bin.g11n.gt.web.action.RoleMgmtAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="input">/common/role-add.jsp</result>
+            <result name="search">/common/role-mgmt.jsp</result>
+            <result name="success">/common/role-mgmt.jsp</result>
+        </action>
+        
+        <action name="roleAdd" class="bin.g11n.gt.web.action.RoleAddAction">
+            <interceptor-ref name="crudStack"/>
+            <result name="error" >/common/role-add.jsp</result>
+            <result name="input">/common/role-add.jsp</result>
+            <result name="success" >/common/role-mgmt.jsp</result>
+            <result name="cancel" type="redirect">/common/role-mgmt.jsp</result>
+        </action>
+
+
+	</package>
+
+</struts>

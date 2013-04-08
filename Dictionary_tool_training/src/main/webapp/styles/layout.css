@@ -1,0 +1,188 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+
+/* SITE SPECIFIC LAYOUT */
+    body {
+        margin: 0;
+        padding: 0;
+        
+        background: white;
+              
+        text-align: center;
+		min-width: 800px;
+    }
+
+    div#page {
+        width: 100%;
+        
+        margin:  0 auto;
+        padding: 0;
+        
+        text-align: center;
+    }
+    
+    /* HEADER */
+    	/*div#outer-header {
+            background: #818EBD;
+            
+    	}
+    	div#content {
+            background: #818EBD;
+    	}*/
+
+        div#header {
+            margin: 0;
+            padding: 5px 0px 0 0;
+            
+            text-align: left;
+        }
+        div#branding {
+            float: left;
+            width: 60%;
+            
+            margin: 0;
+            
+            text-align: left;
+			background: url(img/logo.gif) no-repeat 0 50%;
+        }
+
+		div#branding h1 {
+			padding: 5px 0 5px 200px;
+		}
+
+        div#search {
+            float: right;
+            width: 40%;
+            
+            margin: 0;
+            
+            text-align: right;
+        }
+
+		div#search div#logout {
+			padding: 8px 10px 0 0;
+		}
+
+    div#header_spacer {
+            display: block;
+            height: 5em;
+            background-color: transparent;
+        }
+    /* END HEADER */
+
+
+    /* CONTENT */
+
+    /* END HEADER */
+
+
+    /* CONTENT */
+        div#content_mainMenu {
+			width: 100%;
+			background: url(img/about_branding.gif) no-repeat bottom right;
+			margin-bottom: 0;
+        }
+        div#content_login {
+			width: 100%;
+        }
+        div#content {
+        	width: 100%;
+        }
+        
+        /* MAIN */
+            div#main {
+                float: right;
+				width: 99%;
+            }
+			div#main div.wrapper {
+				margin-right: 5px;
+			}
+			div#main h1 {
+				border-bottom: 1px dotted #ccc;
+				color: #b4c24b;
+			}
+        /* END MAIN */
+        
+        /* SUB */
+            div#sidebar {
+                float: left;
+				width: 180px;
+            }
+			div#sidebar div.wrapper {
+				margin: 0px 10px;
+			}
+        /* END SUB */
+
+            div#sidebar.left {
+                float: left;
+				width: 25%;
+            }
+			div#main.right {
+				float: right;
+				width: 74%;
+			}
+
+			body#login div#main, body#signup div#main {
+				float: left;
+				width: 30%;
+				margin-left: 35%;
+			}
+
+    /* END CONTENT */
+    
+    
+    /* FOOTER */
+        div#footer {
+            /*color: white;
+            background-color: #818EBD;*/
+			background: url(img/nav_bg.gif) repeat-x top left;
+            border-width:0;
+			margin-bottom: 4px;
+        }
+        div#footer p {
+            font-size: 0.8em;
+            
+            margin: 0;
+            padding: 5px;
+        }
+    /* END FOOTER */
+/* END LAYOUT */
+
+
+
+
+/* UL.SUBNAV */
+    ul.subnav {
+        margin: 0;
+        padding: 0;
+        
+        font-size: 0.8em;
+        list-style: none;
+    }
+    ul.subnav li {
+        margin: 0 0 1em 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul.subnav li a,
+    ul.subnav li a:link,
+    ul.subnav li a:visited,
+    ul.subnav li a:active {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+    ul.subnav li a:hover {
+        text-decoration: underline;
+    }
+    ul.subnav li strong {
+        padding: 0 0 0 12px;
+        background: url("../i/subnav-highlight.gif") left top no-repeat transparent;
+    }
+    ul.subnav li strong a,
+    ul.subnav li strong a:link,
+    ul.subnav li strong a:visited,
+    ul.subnav li strong a:active {
+        color: white;
+        background-color: #818EBD;
+    }
+/* END UL.SUBNAV */

@@ -1,0 +1,105 @@
+/* (C) Copyright Hewlett-Packard Company, L.P. All Rights Reserved. */
+
+/*
+   HTML 4.01 and CSS2 compliant
+*/
+
+body {
+  background-color: #ccc;
+}
+input.hpButton {
+  background-color: #7591AC;
+}
+
+div.bEmphasized input {
+  background-color:#335C85;
+  color:#fff;
+}
+
+/* these are the right and bottom edge colors for the various states */
+div.bWrapperUp, div.bWrapperUp div{
+  background-color:#3F658C;
+}
+
+div.bWrapperDown, div.bWrapperDown div{
+  background-color:#003366;
+}
+
+div.bEmphasized, div.bEmphasized div {
+  background-color:#003366;
+}
+
+div.bWrapperDisabled, div.bWrapperDisabled div{
+  background-color:#ADADAD;
+}
+
+div.bWrapperOver, div.bWrapperOver div{
+  background-color:#1164BA;
+}
+
+/* these are the background colors for the button face states. */
+div.bWrapperOver input {
+  background-color:#5391CD;
+  color:#fff;
+}
+
+div.bWrapperDown input {
+  background-color:#335C85;
+  color:#fff;
+}
+
+div.bWrapperDisabled input {
+  background-color:#c1c1c1;
+  color:#fff;
+}
+
+/* Command Button */
+button.hpButton, input.hpButton {
+  border-style:none;
+  height:18px;
+  color: #fff;
+  cursor: pointer; 
+}
+
+button.helpButton,input.helpButton {
+  padding:0px 3px 0px 2px;
+  color: #fff; 
+}
+
+button.hpButton,
+button.hpButtonSmall,
+button.hpButtonVerySmall,
+input.hpButton,input.hpButtonSmall,
+input.hpButtonVerySmall {
+  position:relative;
+  left:-1px;
+  top:-1px;	
+  /* background color a part of the theme css */
+  color: #fff; 
+  font-weight:bold;
+  text-decoration: none;   
+  font-family: Arial,sans-serif;
+  text-align:center;
+}
+
+div.bWrapperUp,
+div.bWrapperOver,
+div.bWrapperDown,
+div.bWrapperDisabled {
+  float:left;
+  direction:ltr;
+  margin-left:5px;
+}
+
+/* this position relative css is what turns the three divs into the 3px slant effect */
+div.bWrapperUp div,div.bWrapperOver div,div.bWrapperDown div,div.bWrapperDisabled div{
+  position:relative;
+  left:-1px;
+  top:-1px;
+}
+
+.loginHelpImage{
+  vertical-align:top;
+  margin-top:3px;
+  margin-left:10%;
+}

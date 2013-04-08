@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<aop:config>
+		<aop:advisor id="userManagerTx" advice-ref="userManagerTxAdvice"
+			pointcut="execution(* *..service.UserManager.*(..))" order="0" />
+		<aop:advisor id="userManagerSecurity" advice-ref="userSecurityAdvice"
+			pointcut="execution(* *..service.UserManager.saveUser(..))" order="1" />
+		<aop:advisor id="managerTx" advice-ref="txAdvice"
+			pointcut="execution(* *..service..*Manager.*(..))" order="2" />
+		<aop:advisor id="batchTx" advice-ref="txAdvice"
+			pointcut="execution(* *..batch..*Batch.*(..))" order="3" />
+	</aop:config>
+
+	<!-- Enable @Transactional support -->
+	<tx:annotation-driven />
+
+	<!-- Enable @AspectJ support -->
+	<aop:aspectj-autoproxy />
+
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+            <tx:method name="get*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+            <tx:method name="search*" read-only="true" />
+			<tx:method name="*" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<tx:advice id="userManagerTxAdvice">
+		<tx:attributes>
+			<tx:method name="save*" rollback-for="UserExistsException" />
+		</tx:attributes>
+	</tx:advice>
+
+	<bean id="lookupManager" class="bin.g11n.gt.service.impl.common.LookupManagerImpl">
+		<property name="lookupDao" ref="lookupDao" />
+	</bean>
+
+	<bean id="manager" class="bin.g11n.gt.service.impl.common.BaseManager">
+		<property name="dao" ref="universalDao" />
+	</bean>
+
+	<bean id="userManager" class="bin.g11n.gt.service.impl.common.UserManagerImpl">
+		<property name="userDao" ref="userDao" />
+        <property name="roleDao" ref="roleDao" />
+	</bean>
+
+	<bean id="userSecurityAdvice" class="bin.g11n.gt.service.common.UserSecurityAdvice">
+	</bean>
+
+
+	<!--  cache management  user-role-function -->
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+	<!--  get user by username  -->
+	<bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>userCache</value>
+		</property>
+	</bean>
+
+	<bean id="userCache"
+		class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache">
+		<property name="cache">
+			<ref local="userCacheBackend" />
+		</property>
+	</bean>
+
+	<!--
+		get role by function: the roles here must have been granted to the
+		current user.
+	-->
+	<bean id="authorityFunctionCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>authorityFunctionCache</value>
+		</property>
+	</bean>
+
+	<bean id="authorityFunctionCache"
+		class="bin.g11n.gt.security.cache.EhCacheBasedFunctionAuthorityCache">
+		<property name="cache">
+			<ref local="authorityFunctionCacheBackend" />
+		</property>
+	</bean>
+	<!-- get role by user  -->
+	<bean id="authorityUserCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>authorityUserCache</value>
+		</property>
+	</bean>
+
+	<bean id="authorityUserCache"
+		class="bin.g11n.gt.security.cache.EhCacheBasedUserAuthorityCache">
+		<property name="cache">
+			<ref local="authorityUserCacheBackend" />
+		</property>
+	</bean>
+	<!-- functions by role -->
+	<bean id="functionsRoleCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>functionsRoleCache</value>
+		</property>
+	</bean>
+
+	<bean id="functionsRoleCache" class="bin.g11n.gt.security.cache.EhCacheBasedFunctionCache">
+		<property name="cache">
+			<ref local="functionsRoleCacheBackend" />
+		</property>
+	</bean>
+
+	<!-- get granted functions of current user -->
+	<bean id="functionsCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="cacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>functionsUserCache</value>
+		</property>
+	</bean>
+
+	<bean id="functionsUserCache"
+		class="bin.g11n.gt.security.cache.EhCacheByFunctionNameCache">
+		<property name="cache">
+			<ref local="functionsCacheBackend" />
+		</property>
+	</bean>
+
+
+	<!-- end:overrided by bguo to rebuild cache manager  -->
+
+	<bean id="securityUtil" class="bin.g11n.gt.security.SecurityUtil">
+		<property name="userManager" ref="userManager" />
+		<property name="userDao" ref="userDao" />
+		<property name="roleDao" ref="roleDao" />
+		<property name="functionDao" ref="functionDao" />
+	</bean>
+
+	<bean id="roleManager" class="bin.g11n.gt.service.impl.common.RoleManagerImpl">
+        <property name="dao" ref="universalDao" />
+		<property name="roleDao" ref="roleDao" />
+        <property name="functionDao" ref="functionDao" />
+	</bean>
+
+	<bean id="functionManager" class="bin.g11n.gt.service.impl.common.FunctionManagerImpl">
+		<property name="functionDao" ref="functionDao" />
+	</bean>
+
+	<bean id="buManager" class="bin.g11n.gt.service.impl.app.BuManagerImpl">
+		<property name="buDao" ref="buDao" />
+	</bean>
+
+
+	<bean id="productCenterManager"
+        class="bin.g11n.gt.service.impl.app.ProductCenterManagerImpl">
+        <property name="productCenterDao" ref="productCenterDao" />
+        <property name="dao" ref="universalDao" />
+    </bean>
+
+	<bean id="productManager"
+        class="bin.g11n.gt.service.impl.app.ProductManagerImpl">
+        <property name="productDao" ref="productDao" />
+        <property name="dao" ref="universalDao" />
+    </bean>
+
+
+</beans>

@@ -1,0 +1,92 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0//EN" 
+    "http://www.opensymphony.com/xwork/xwork-validator-1.0.dtd">
+<validators>
+    <field name="searchCondition.productId.productName">
+        <field-validator type="regex">
+            <param name="expression">[1-9][0-9]*[.]?[0-9]*|0[.][0-9]+|0</param>
+            <message key="errors.alphabet" />
+        </field-validator>
+    </field> 
+        <field name="searchCondition.productId.productName">
+        <field-validator type="required">
+            <message key="OMPJME104" />
+        </field-validator>
+    </field>
+    <field name="pmBasicInfoPursuit.action">
+        <field-validator type="requiredstring">
+            <message key="OMPJME107" />
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="trim">true</param>
+            <param name="minLength">1</param>
+            <param name="maxLength">200</param>
+            <message key="OMPJME108" />
+        </field-validator>
+    </field>
+
+    <!-- requiredstring -->
+    <field name="pbi.clientCd">
+        <field-validator type="requiredstring">
+             <message key="errors.required"/>
+        </field-validator>
+    </field>
+
+    <!-- stringlength -->    
+    <field name="username">
+		<field-validator type="stringlength">
+			<param name="trim">true</param>
+			<param name="minLength">5</param>
+			<param name="maxLength">10</param>
+            <message key=""/>
+            <!-- message: User name's length must be between ${min} and ${max}. -->
+		</field-validator>
+	</field>
+    
+    <!-- required field -->   
+    <field name="pbi.pursuitCd">
+        <field-validator type="required">
+             <message key="errors.required"/>
+        </field-validator>
+    </field>
+    
+    <!-- int -->      
+    <field name="count">
+		<field-validator type="required">
+             <message key=""/>
+		</field-validator>
+		<field-validator type="int">
+			 <param name="min">0</param>
+			 <param name="max">5</param>
+             <message key=""/>
+             <!-- message: count must be between ${min} and ${max}, current value is ${count}. -->
+		</field-validator>
+	</field>
+	
+	<!-- date -->
+	<field name="birth">
+		<field-validator type="date">
+			<param name="min">01/01/1970</param>
+            <message key=""/>
+		</field-validator>
+	</field>
+	
+	<!-- email -->
+    <field name="">
+        <field-validator type="email">
+             <message key=""/>
+        </field-validator>
+    </field>
+    
+    <!-- regex -->
+    <field name="phone">
+        <field-validator type="regex">
+            <param name="regex">\([\d][\d][\d]\) [\d][\d][\d]-[\d][\d][\d][\d]</param>
+            <message key=""/>
+            <!-- message: Phone number must be in the format (XXX) XXX-XXXX. -->
+        </field-validator>
+    </field>
+    	   
+    
+</validators>
+
+

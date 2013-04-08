@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+<TITLE>Calendar</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL=StyleSheet HREF="calendar.css" TYPE="text/css">
+<SCRIPT language="JavaScript">
+<!--
+/*
+ * Calendar (Calendar renderer) version 3.0
+ * Pieces of code were excerpts from 
+ * tutorial websites (at least 75% re-written)
+ */
+
+window.onerror = null;
+var months = new Array(13);
+months[1] = "JAN";
+months[2] = "FEB";
+months[3] = "MAR";
+months[4] = "APR";
+months[5] = "MAY";
+months[6] = "JUN";
+months[7] = "JUL";
+months[8] = "AUG";
+months[9] = "SEP";
+months[10] = "OCT";
+months[11] = "NOV";
+months[12] = "DEC";
+var nw696969__122hfjd_uroir = new Date();
+var f1ReAy48394__3892 = 1970;  
+//var f1ReAy48394__3892 = nw696969__122hfjd_uroir.getFullYear()-100;  
+var hehe_kaya434xx_mo_decode_to4783 = nw696969__122hfjd_uroir.getFullYear()+21;  
+var day   = nw696969__122hfjd_uroir.getDate();
+var month = nw696969__122hfjd_uroir.getMonth();
+var year  = nw696969__122hfjd_uroir.getFullYear();
+if (year < 2000) {
+year = year + 1900;
+}var XXdfo0067_ks___dfjds3743= new Array();
+var llecYaD6473sdbsn6437__= new Array();
+var n;
+function sagot347__epPPIdwnd(cell){
+	var OpenerFormName = opener.document.forms[0].elements['hName'].value;
+	var openerFormField = opener.document.forms[0].elements['hField'].value;		
+	opener.document.forms[OpenerFormName].elements[openerFormField].value = llecYaD6473sdbsn6437__[cell];	
+	self.close();
+}
+function Powe_rOverwhelming43(){                                                                                                            var co_4839jsksnnd997833, sx7897HHmmJSAFXcc;
+sx7897HHmmJSAFXcc='Select a date';
+co_4839jsksnnd997833='<FORM name="calForm" id="calForm">';
+co_4839jsksnnd997833+='<TABLE border="1" cellspacing="0" cellpadding="0" class="calborder">';
+co_4839jsksnnd997833+='<TR><TD>';
+co_4839jsksnnd997833+='<TABLE border="0" cellspacing="2" cellpadding="0" class="calender">'
+co_4839jsksnnd997833+='<TR><TD colspan="6" bgcolor="SteelBlue"><b><font face="verdana" size="2" color="white">'+sx7897HHmmJSAFXcc+'</font></b></TD></TR>';
+co_4839jsksnnd997833+='<TR><TD colspan="3">';
+co_4839jsksnnd997833+='<SELECT name="calMonth" onChange="updHGRDS__52364523_78()" class="caldropdowns">';
+co_4839jsksnnd997833+='<OPTION>January<OPTION>February<OPTION>March<OPTION>April<OPTION>May';
+co_4839jsksnnd997833+='<OPTION>June<OPTION>July<OPTION>August<OPTION>September<OPTION>October';
+co_4839jsksnnd997833+='<OPTION>November<OPTION>December</SELECT>';
+co_4839jsksnnd997833+='</TD><TD colspan="3" align="right">';
+co_4839jsksnnd997833+='<SELECT name="calYear" onChange="updHGRDS__52364523_78()" class="caldropdowns">';
+for (n = f1ReAy48394__3892; n < hehe_kaya434xx_mo_decode_to4783; n++)
+{if (n==year){co_4839jsksnnd997833+='<OPTION selected value="' + n + '">' + n + '</OPTION>';
+  }else{co_4839jsksnnd997833+='<OPTION value="'+ n + '">' + n + '</OPTION>';}}
+co_4839jsksnnd997833+='</SELECT>';
+co_4839jsksnnd997833+='</TD></TR>';
+co_4839jsksnnd997833+='<TR><TD colspan="6" class="calinsideborder">';
+co_4839jsksnnd997833+='<TABLE cellspacing="0" class="calinsidesettings" border="1">';
+co_4839jsksnnd997833+='<TR align="center">';
+co_4839jsksnnd997833+='<TD width="14%" class="caldays">Sun</TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="caldays">Mon</TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="caldays">Tue</TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="caldays">Wed</TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="caldays">Thu</TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="caldays">Fri</TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="caldays">Sat</TD>';
+co_4839jsksnnd997833+='</TR>';	
+var lleCLaC46374__3923sfhndssjHGFDH, dsaga7283__;
+for (lleCLaC46374__3923sfhndssjHGFDH=0;lleCLaC46374__3923sfhndssjHGFDH<6;lleCLaC46374__3923sfhndssjHGFDH++)
+{co_4839jsksnnd997833+='<TR>';
+co_4839jsksnnd997833+='<TD width="14%" class="calwkdy"><INPUT type="button" value="" class="calwknd" id="cal' + (lleCLaC46374__3923sfhndssjHGFDH*7) + '" onClick="sagot347__epPPIdwnd('+(lleCLaC46374__3923sfhndssjHGFDH*7)+');"></TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="calwkdy"><INPUT type="button" value="" class="calwkdy" id="cal' + (lleCLaC46374__3923sfhndssjHGFDH*7+1) + '" onClick="sagot347__epPPIdwnd('+(lleCLaC46374__3923sfhndssjHGFDH*7+1)+');"></TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="calwkdy"><INPUT type="button" value="" class="calwkdy" id="cal' + (lleCLaC46374__3923sfhndssjHGFDH*7+2) + '" onClick="sagot347__epPPIdwnd('+(lleCLaC46374__3923sfhndssjHGFDH*7+2)+');"></TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="calwkdy"><INPUT type="button" value="" class="calwkdy" id="cal' + (lleCLaC46374__3923sfhndssjHGFDH*7+3) + '" onClick="sagot347__epPPIdwnd('+(lleCLaC46374__3923sfhndssjHGFDH*7+3)+');"></TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="calwkdy"><INPUT type="button" value="" class="calwkdy" id="cal' + (lleCLaC46374__3923sfhndssjHGFDH*7+4) + '" onClick="sagot347__epPPIdwnd('+(lleCLaC46374__3923sfhndssjHGFDH*7+4)+');"></TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="calwkdy"><INPUT type="button" value="" class="calwkdy" id="cal' + (lleCLaC46374__3923sfhndssjHGFDH*7+5) + '" onClick="sagot347__epPPIdwnd('+(lleCLaC46374__3923sfhndssjHGFDH*7+5)+');"></TD>';
+co_4839jsksnnd997833+='<TD width="14%" class="calwkdy"><INPUT type="button" value="" class="calwknd" id="cal' + (lleCLaC46374__3923sfhndssjHGFDH*7+6) + '" onClick="sagot347__epPPIdwnd('+(lleCLaC46374__3923sfhndssjHGFDH*7+6)+');"></TD></TR>';}
+co_4839jsksnnd997833+='</TABLE>';
+co_4839jsksnnd997833+='</TD></TR>';
+co_4839jsksnnd997833+='<TR align="center">';
+co_4839jsksnnd997833+='<TD width="20%">';
+co_4839jsksnnd997833+='<INPUT type="button" name="backyear" value="&lt;&lt;" class="calbutts" onClick=b__3829likodonTa32();updHGRDS__52364523_78()>';
+co_4839jsksnnd997833+='</TD>';
+co_4839jsksnnd997833+='<TD width="20%">';
+co_4839jsksnnd997833+='<INPUT type="button" name="backmonth" value="&lt;" class="calbutts" onClick=likodwanBu378397();updHGRDS__52364523_78()>';
+co_4839jsksnnd997833+='</TD>';
+co_4839jsksnnd997833+='<TD width="20%">';
+co_4839jsksnnd997833+='<INPUT type="button" name="TODAY" value="TODAY" class="calbutts" onClick=ca73482lTOD7ednAY__89()>';
+co_4839jsksnnd997833+='</TD>';
+co_4839jsksnnd997833+='<TD width="20%">';
+co_4839jsksnnd997833+='<INPUT type="button" name="onmonth" value="&gt;" class="calbutts" onClick=skipeh234782Monthdbsje3373_();updHGRDS__52364523_78()>';
+co_4839jsksnnd997833+='</TD>';
+co_4839jsksnnd997833+='<TD width="20%">';
+co_4839jsksnnd997833+='<INPUT type="button" name="onyear" value="&gt;&gt;" class="calbutts" onClick=LunagTuan3283();updHGRDS__52364523_78()>';
+co_4839jsksnnd997833+='</TD>';
+co_4839jsksnnd997833+='</TR>';
+co_4839jsksnnd997833+='</TABLE>';
+co_4839jsksnnd997833+='</TD>';
+co_4839jsksnnd997833+='</TR>';
+co_4839jsksnnd997833+='</TABLE>';
+co_4839jsksnnd997833+='</FORM>';
+document.write(co_4839jsksnnd997833);
+for (var i = 0; i < 42; i++){
+var eleFant43674__jkf;eleFant43674__jkf = 'cal' + i;XXdfo0067_ks___dfjds3743[i] = document.forms['calForm'].elements[eleFant43674__jkf];}ca73482lTOD7ednAY__89();updHGRDS__52364523_78();}
+function ca73482lTOD7ednAY__89()
+{day = nw696969__122hfjd_uroir.getDate();document.forms['calForm'].elements['calMonth'].selectedIndex=nw696969__122hfjd_uroir.getMonth();document.forms['calForm'].elements['calYear'].value=nw696969__122hfjd_uroir.getFullYear();
+updHGRDS__52364523_78();}
+function updHGRDS__52364523_78()
+{month = document.forms['calForm'].elements['calMonth'].selectedIndex;
+year  = document.forms['calForm'].elements['calYear'].value;
+var f_UnaBwan46782hfds__sjfkfd = new Date (year, month, 1);
+var pers_7589PosiTi237__ = f_UnaBwan46782hfds__sjfkfd.getDay();
+var ngayosh63473NfhjsdaNNNN__=1;
+var days=arawAaBwahde3672HAHA(month,year);
+var nak578araangAraw64734_=arawAaBwahde3672HAHA(month-1,year);
+var str;
+for (n=0; n < 42; n++)
+{if (pers_7589PosiTi237__==n){
+if (month==nw696969__122hfjd_uroir.getMonth()&year==nw696969__122hfjd_uroir.getFullYear()&ngayosh63473NfhjsdaNNNN__==nw696969__122hfjd_uroir.getDate()){
+str=ngayosh63473NfhjsdaNNNN__;XXdfo0067_ks___dfjds3743[n].className = 'calToday';XXdfo0067_ks___dfjds3743[n].value = str.toString();}
+else{XXdfo0067_ks___dfjds3743[n].className = 'calwkdy';XXdfo0067_ks___dfjds3743[n].value = ngayosh63473NfhjsdaNNNN__;}
+alaxfndSetdArawe28(n,month,year,ngayosh63473NfhjsdaNNNN__);
+pers_7589PosiTi237__++;
+ngayosh63473NfhjsdaNNNN__++;
+}else{if (pers_7589PosiTi237__ == 66)
+{alaxfndSetdArawe28(n, month + 1, year, ngayosh63473NfhjsdaNNNN__);
+str = ngayosh63473NfhjsdaNNNN__;
+ngayosh63473NfhjsdaNNNN__++;}else
+{alaxfndSetdArawe28(n, month - 1, year, nak578araangAraw64734_ - pers_7589PosiTi237__ + n + 1);
+str = nak578araangAraw64734_ - pers_7589PosiTi237__ + n + 1;}
+XXdfo0067_ks___dfjds3743[n].className = 'calPrevious';
+XXdfo0067_ks___dfjds3743[n].value = str.toString();}
+if (ngayosh63473NfhjsdaNNNN__>days){ngayosh63473NfhjsdaNNNN__ = 1;
+pers_7589PosiTi237__ = 66;}}}
+function alaxfndSetdArawe28(cell, month, year, day)
+{month++;if (month==13) { month = 1;year++;}
+if (month==0) {month = 12;year--;}
+var pf3434angaklanNgbwansdf2347;
+var pfgfdg4890anggn54656alan_taon;
+var araw4893MAyondfhjs43__;
+pf3434angaklanNgbwansdf2347 = month.toString();
+if (pf3434angaklanNgbwansdf2347.length==1){pf3434angaklanNgbwansdf2347="0"+pf3434angaklanNgbwansdf2347} {
+araw4893MAyondfhjs43__=day.toString();
+}
+if (araw4893MAyondfhjs43__.length==1){araw4893MAyondfhjs43__ = "0" + araw4893MAyondfhjs43__;}
+pfgfdg4890anggn54656alan_taon=year.toString();
+//var temp_idx = pf3434angaklanNgbwansdf2347 * 1;
+var temp_idx = (pf3434angaklanNgbwansdf2347.length < 2) ? "0" + pf3434angaklanNgbwansdf2347 : pf3434angaklanNgbwansdf2347;
+//format the date
+//llecYaD6473sdbsn6437__[cell]= araw4893MAyondfhjs43__ + " " + months[temp_idx] + " " + pfgfdg4890anggn54656alan_taon;}
+//llecYaD6473sdbsn6437__[cell]= pfgfdg4890anggn54656alan_taon + "-" + temp_idx + "-" + araw4893MAyondfhjs43__;}
+llecYaD6473sdbsn6437__[cell]= temp_idx + "/" + araw4893MAyondfhjs43__ + "/" + pfgfdg4890anggn54656alan_taon;}
+//end format
+function arawAaBwahde3672HAHA(month, year)  {
+var days;if(month==0 || month==2 || month==4 || month==6 || month==7 || month==9 || month==11 || month==-1 || month==12) {days=31;
+}else if (month==3 || month==5 || month==8 || month==10) {days=30;}
+else if (month==1)  {if (Lundr344656565agTaonHEHE(year)) { days=29; }else {days=28; }}return (days);}
+function Lundr344656565agTaonHEHE (Year) {
+if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0)) {
+return (true);
+} else { return (false); }
+}function skipeh234782Monthdbsje3373_()
+{month = document.forms['calForm'].elements['calMonth'].selectedIndex;
+month++;if (month==12)
+{month=0;LunagTuan3283();}document.forms['calForm'].elements['calMonth'].selectedIndex = month;}
+function LunagTuan3283()
+{year  = document.forms['calForm'].elements['calYear'].value;
+year++;
+if (year==hehe_kaya434xx_mo_decode_to4783){year=f1ReAy48394__3892}
+document.forms['calForm'].elements['calYear'].value=year;}
+function likodwanBu378397(){
+month = document.forms['calForm'].elements['calMonth'].selectedIndex;
+month--;
+if (month==-1)
+{ month = 11; b__3829likodonTa32();
+}document.forms['calForm'].elements['calMonth'].selectedIndex = month;}
+function b__3829likodonTa32()
+{year  = document.forms['calForm'].elements['calYear'].value;year--;if (year<f1ReAy48394__3892){year=hehe_kaya434xx_mo_decode_to4783-1}document.forms['calForm'].elements['calYear'].value = year;}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#FFFFFF" text="#000000">
+<SCRIPT language="JavaScript" type="text/javascript">
+<!--
+Powe_rOverwhelming43();
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>

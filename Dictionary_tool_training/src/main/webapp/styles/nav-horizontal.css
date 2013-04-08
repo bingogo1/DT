@@ -1,0 +1,93 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+
+/* NAV */
+	div#nav {
+        font-size: 1em;
+    }
+    * html div#nav {
+        /* hide ie/mac \*/
+        height: 1%;
+        /* end hide */
+    }
+    div#nav div.wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+		background: url(img/nav_bg.gif) repeat-x bottom left;
+    }
+    div#nav ul {
+		float: right;
+                
+        margin: 0;
+		margin-right: 5px;
+        padding: 0;
+        
+        line-height: 1em;
+        list-style: none;
+    }
+    div#nav li {
+        float: left;
+   
+        list-style: none;
+        
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    div#nav a.current {
+        display: inline-block;
+        /* hide from ie/mac \*/
+        display: block;
+        /* end hide */
+        font-weight: bold;
+
+		padding-bottom: 5px;
+		border-color: #727377;
+
+		background: #fff url(img/on_bg.gif) repeat-x bottom left !important;
+    }
+
+    div#nav a {
+		float: left;
+		display: block;
+		margin: 0 1px 0 0;
+		padding: 4px 8px;
+		color: #333;
+		text-decoration: none;
+		border: 1px solid #9B8748;
+		border-bottom: none;
+		background: #F9E9A9 url(img/off_bg.gif) repeat-x top left;
+    }
+    div#nav a:hover {
+		padding-bottom: 5px;
+	}
+
+/* END NAV */
+
+.box {
+  margin: 5px 0;
+  background: url(img/h3-bg.gif) no-repeat top left;
+  }
+.box h3 {
+  margin: 0;
+  padding: 6px 8px 4px 10px;
+  font-size: 80%;
+  color: #333;
+  border-bottom: 1px solid #E0CFAB;
+  background: url(img/h3-bg-right.gif) no-repeat top right;
+  }
+.box ul {
+  margin: 0;
+  padding: 14px 10px 14px 0;
+  list-style: none;
+  background: url(img/div-bottom-right.gif) no-repeat bottom right;
+  }
+.box li {
+  margin: 0 0 6px; 
+  padding-left: 6px;
+  } 
+.box .last {
+  background: url(img/div-bottom.gif) no-repeat bottom left;
+  }

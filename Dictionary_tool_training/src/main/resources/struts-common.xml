@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+    <package name="default" extends="struts-default">
+    
+        <interceptors>
+            <!-- Interceptor to handle allowing only admins to certain actions -->
+            <interceptor name="adminOnly" class="bin.g11n.gt.web.interceptor.UserRoleAuthorizationInterceptor"/>
+            <interceptor name="dataAccess" class="bin.g11n.gt.web.interceptor.DataLoadInterceptor"/> 
+            <!-- Copied from struts-default.xml and changed validation exclude methods -->
+            <interceptor-stack name="defaultStack">
+                <interceptor-ref name="exception"/>
+                <interceptor-ref name="alias"/>
+                <interceptor-ref name="servlet-config"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="dataAccess"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="debugging"/>
+                <interceptor-ref name="profiling"/>
+                <interceptor-ref name="scoped-model-driven"/>
+                <interceptor-ref name="model-driven"/>
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="static-params"/>
+                <interceptor-ref name="params">
+                    <param name="excludeParams">dojo\..*</param>
+                </interceptor-ref>
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="validation">
+                    <param name="excludeMethods">cancel,execute,delete,edit,list,start,search</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+            </interceptor-stack>
+            <interceptor-stack name="fileUploadStack">
+                <interceptor-ref name="fileUpload"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+            <interceptor-stack name="adminCheck">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="adminOnly"/>
+            </interceptor-stack>           
+            <interceptor-stack name="crudStack">
+            	<interceptor-ref name="checkbox" />
+                <interceptor-ref name="params" />
+				<interceptor-ref name="static-params" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>          
+            <interceptor-stack name="tokenStack">
+                <interceptor-ref name="checkbox" />
+                <interceptor-ref name="params" />
+		        <interceptor-ref name="static-params" />
+		        <interceptor-ref name="prepare"/>
+		        <interceptor-ref name="params" />
+		        <interceptor-ref name="static-params"/>
+                <interceptor-ref name="token"/>
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+            <interceptor name="multiFileUpload" class="bin.g11n.gt.web.interceptor.MultiFileUploadInterceptor"/>
+           	<interceptor-stack name="multiFileUploadStack">
+               	<interceptor-ref name="multiFileUpload"/>
+            </interceptor-stack>
+        
+        </interceptors>
+        
+        <global-results>
+            <result name="invalid.token" >mainMenu.action</result>
+            <result name="mainMenu" type="redirect">mainMenu.action</result>
+            <result name="dataAccessFailure">/common/dataAccessFailure.jsp</result>
+            <result name="generalException">/common/generalException.jsp</result>
+        </global-results>
+<!-- bguo: production should restore this exception control global-exception-mappings
+     
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="generalException" />
+            <exception-mapping exception="org.springframework.dao.DataAccessException" result="dataAccessFailure" />
+            <exception-mapping exception="javax.servlet.ServletException" result="generalException" />
+            <exception-mapping exception="org.springframework.jdbc.UncategorizedSQLException" result="generalException" />
+            <exception-mapping exception="org.hibernate.TransactionException" result="generalException" />
+        </global-exception-mappings> 
+	bguo end: --> 
+    </package>
+    
+</struts>

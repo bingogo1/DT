@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<decorators defaultdir="/decorators">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+        <pattern>/index.html</pattern>
+        <pattern>/login.jsp*</pattern>
+        <pattern>/debug.jsp</pattern>
+        <pattern>/styles/*</pattern>
+        <pattern>/scripts/*</pattern>
+        <pattern>/images/*</pattern>
+        <pattern>/dojo/*</pattern>
+        <pattern>/struts/*</pattern>
+        <pattern>/*.htm</pattern>
+        <pattern>/sidemenu.action</pattern>
+        <pattern>/app/popup/*</pattern>
+    </excludes>
+
+    <decorator name="default" page="gt_decorate.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
+</decorators>
